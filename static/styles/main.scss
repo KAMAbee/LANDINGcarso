@@ -1406,7 +1406,7 @@ html {
             flex-direction: column;
             position: relative;
 
-            &-wrap{
+            &-wrap {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -1458,15 +1458,15 @@ html {
                 }
             }
         }
-    
+
     }
 
-    @media (max-width: 1110px) {  
-        .main__check{
+    @media (max-width: 1110px) {
+        .main__check {
             padding-bottom: 0px;
         }
-        
-        .main__check-in-wrap{
+
+        .main__check-in-wrap {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -2059,6 +2059,27 @@ html {
             justify-content: center;
             align-items: center;
             gap: 60px;
+        }
+
+        &-2gis {
+            font-weight: 700;
+            line-height: 34px;
+            font-size: 26px;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #006dff;
+            cursor: pointer;
+            transition: color .2s;
+
+            &:hover {
+                text-decoration: underline;
+                color: #0954b7;
+            }
+
+            &:active {
+                text-decoration: underline;
+                color: #0954b7;
+            }
         }
 
         &-logo {

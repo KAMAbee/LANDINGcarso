@@ -1464,6 +1464,21 @@ html {
       justify-content: center;
       align-items: center;
       gap: 60px; }
+    .footer__in-2gis {
+      font-weight: 700;
+      line-height: 34px;
+      font-size: 26px;
+      text-decoration: none;
+      white-space: nowrap;
+      color: #006dff;
+      cursor: pointer;
+      transition: color .2s; }
+      .footer__in-2gis:hover {
+        text-decoration: underline;
+        color: #0954b7; }
+      .footer__in-2gis:active {
+        text-decoration: underline;
+        color: #0954b7; }
     .footer__in-logo {
       height: 40px; }
     .footer__in-privacy {
