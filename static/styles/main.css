@@ -1310,7 +1310,7 @@ html {
         top: auto;
         bottom: -200px;
         right: calc(15% - (var(--size) - 130px)/ 2); }
-    @media (max-width: 830px) {
+    @media (max-width: 1000px) {
       .main__help .main__help-in-img {
         display: none; }
       .main__help .main__help-in-circle {
