@@ -1739,6 +1739,10 @@ html {
         }
 
         @media (max-width: 728px) {
+            .main__cities-in-title {
+                text-align: center;
+            }
+
             .main__cities-in-desc {
                 text-align: center;
             }
