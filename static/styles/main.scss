@@ -1614,6 +1614,150 @@ html {
     }
 
 
+    &__cities {
+        width: 100%;
+        background-color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0 0 0;
+
+        &-in {
+            width: calc(100% - 40px);
+            max-width: 1180px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            &-title {
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 38px;
+                color: #000;
+                text-align: left;
+            }
+
+            &-desc {
+                font-weight: 500;
+                font-size: 18px;
+                color: #db1b1b;
+                margin-top: 20px;
+                line-height: 26px;
+                width: 1000px;
+
+                &-phone {
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: #f93131;
+                    white-space: nowrap;
+                }
+            }
+
+            &-items {
+                margin-top: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            &-item {
+
+                &-header {
+                    width: 300px;
+                    background-color: #434343;
+                    font-weight: 500;
+                    color: white;
+                    padding: 10px;
+                    text-align: left;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 16px;
+                    position: relative;
+                    z-index: 699;
+                    border-radius: 8px;
+                    transition: border-radius 0.4s ease-in-out;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &-arrow {
+                        pointer-events: none;
+                        transition: transform 0.3s;
+                        font-size: 12px;
+                    }
+                }
+
+                &-content {
+                    max-height: 0;
+                    overflow: hidden;
+                    width: 300px;
+                    padding: 10px;
+                    padding: 0 10px;
+                    background: #dddddd;
+                    border-radius: 0 0 8px 8px;
+                    z-index: 700;
+                    transition: max-height 0.2s ease-in-out, padding 0.3s ease-in-out;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    position: absolute;
+
+                    &-title {
+                        color: #000000;
+                        font-weight: 600;
+                        font-size: 18px;
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        margin: 5px 0;
+                    }
+                }
+
+                &.active {
+                    .main__cities-in-item-content {
+                        max-height: 200px;
+                        padding: 10px;
+                    }
+
+                    .main__cities-in-item-header {
+                        border-radius: 8px 8px 0 0;
+                    }
+
+                    .main__cities-in-item-header-arrow {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1110px) {
+            .main__cities-in-desc {
+                width: auto;
+            }
+        }
+
+        @media (max-width: 728px) {
+            .main__cities-in-desc {
+                text-align: center;
+            }
+
+            .main__cities-in {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main__cities-in-items {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+
     &__comments {
         width: 100%;
         background-color: #FFF;
@@ -1929,7 +2073,6 @@ html {
                 font-size: 28px;
                 font-weight: 700;
                 line-height: 34px;
-                margin-top: 20px;
                 text-align: center;
             }
 
@@ -2050,9 +2193,13 @@ html {
     &__in {
         width: calc(100% - 40px);
         max-width: 1180px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
         &-wrap {
             display: flex;
@@ -2160,10 +2307,54 @@ html {
                 }
             }
         }
+
+        &-partners {
+            margin-bottom: 100px;
+
+            &-title {
+                color: #000;
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 34px;
+                margin-bottom: 20px;
+            }
+
+            &-desc {
+                font-weight: 400;
+                font-size: 22px;
+                color: #000;
+                margin-top: 20px;
+
+                &-ul {
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #000;
+                    columns: 5;
+                    margin: 0;
+                    padding: 0;
+                    margin-top: 30px;
+                    padding: 0 20px;
+                    list-style: none;
+                }
+            }
+        }
     }
 
-    @media (max-width: 680px) {
-        .footer__in {
+    @media (max-width: 956px) {
+        .footer__in-partners-desc-ul {
+            columns: 4;
+        }
+    }
+
+    @media (max-width: 860px) {
+        .footer__in-partners-desc-ul {
+            list-style: none;
+            columns: 3;
+            padding: 0;
+        }
+
+        .footer__in-top {
+            display: flex;
             flex-direction: column;
             gap: 40px;
         }
@@ -2177,6 +2368,19 @@ html {
             gap: 20px;
         }
 
+        .footer__in-partners-title{
+            text-align: center;
+        }
+
+        .footer__in-partners-desc{
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 591px) {
+        .footer__in-partners-desc-ul {
+            columns: 2;
+        }
     }
 }
 

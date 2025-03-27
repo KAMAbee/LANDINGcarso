@@ -66,3 +66,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+document.addEventListener("click", (event) => {
+  const isButton = event.target.classList.contains("main__cities-in-item-header");
+  const isContent = event.target.closest(".main__cities-in-item-content");
+  const allItems = document.querySelectorAll(".main__cities-in-item");
+  
+  if (isButton) {
+      const item = event.target.parentElement;
+      const content = event.target.nextElementSibling;
+      const isVisible = item.classList.contains("active");
+      
+      allItems.forEach(i => i.classList.remove("active"));
+      
+      if (!isVisible) {
+          item.classList.add("active");
+      }
+  } else if (!isContent) {
+      allItems.forEach(i => i.classList.remove("active"));
+  }
+});
+
