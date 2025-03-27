@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("click", (event) => {
   const isButton = event.target.closest(".main__cities-in-item-header");
+  const isContent = event.target.closest(".main__cities-in-item-content");
   const allItems = document.querySelectorAll(".main__cities-in-item");
 
   if (isButton) {
@@ -84,7 +85,7 @@ document.addEventListener("click", (event) => {
           activeContent.style.maxHeight = "200px"; // Устанавливаем текущую высоту
           activeContent.offsetHeight; // Принудительный рефлоу
           activeContent.style.maxHeight = "0"; // Запускаем анимацию закрытия
-          
+
           currentlyActive.classList.remove("active");
 
           // Ждём окончания анимации, затем открываем новый
@@ -92,7 +93,7 @@ document.addEventListener("click", (event) => {
               activeContent.removeEventListener("transitionend", onClose);
               if (!isVisible) {
                   item.classList.add("active");
-                  content.style.maxHeight = "200px";
+                  content.style.maxHeight ="200px";
               }
           }, { once: true });
       } else {
@@ -105,8 +106,8 @@ document.addEventListener("click", (event) => {
               content.style.maxHeight = "200px";
           }
       }
-  } else {
-      // Закрываем всё, если клик вне списка
+  } else if (!isContent) {
+      // Закрываем всё, если клик вне списка и контента
       allItems.forEach(i => {
           const content = i.querySelector(".main__cities-in-item-content");
           content.style.maxHeight = "0";
@@ -114,4 +115,5 @@ document.addEventListener("click", (event) => {
       });
   }
 });
+
 
