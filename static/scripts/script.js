@@ -68,22 +68,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("click", (event) => {
-  const isButton = event.target.classList.contains("main__cities-in-item-header");
-  const isContent = event.target.closest(".main__cities-in-item-content");
+  const isButton = event.target.closest(".main__cities-in-item-header");
   const allItems = document.querySelectorAll(".main__cities-in-item");
-  
+
   if (isButton) {
-      const item = event.target.parentElement;
-      const content = event.target.nextElementSibling;
+      const item = isButton.closest(".main__cities-in-item");
+      const content = item.querySelector(".main__cities-in-item-content");
       const isVisible = item.classList.contains("active");
-      
-      allItems.forEach(i => i.classList.remove("active"));
-      
-      if (!isVisible) {
-          item.classList.add("active");
+
+      // Найдём текущий открытый элемент
+      const currentlyActive = document.querySelector(".main__cities-in-item.active");
+
+      if (currentlyActive && currentlyActive !== item) {
+          const activeContent = currentlyActive.querySelector(".main__cities-in-item-content");
+          activeContent.style.maxHeight = "200px"; // Устанавливаем текущую высоту
+          activeContent.offsetHeight; // Принудительный рефлоу
+          activeContent.style.maxHeight = "0"; // Запускаем анимацию закрытия
+          
+          currentlyActive.classList.remove("active");
+
+          // Ждём окончания анимации, затем открываем новый
+          activeContent.addEventListener("transitionend", function onClose() {
+              activeContent.removeEventListener("transitionend", onClose);
+              if (!isVisible) {
+                  item.classList.add("active");
+                  content.style.maxHeight = "200px";
+              }
+          }, { once: true });
+      } else {
+          // Если нет открытого или кликаем по тому же самому - просто переключаем
+          if (isVisible) {
+              content.style.maxHeight = "0";
+              item.classList.remove("active");
+          } else {
+              item.classList.add("active");
+              content.style.maxHeight = "200px";
+          }
       }
-  } else if (!isContent) {
-      allItems.forEach(i => i.classList.remove("active"));
+  } else {
+      // Закрываем всё, если клик вне списка
+      allItems.forEach(i => {
+          const content = i.querySelector(".main__cities-in-item-content");
+          content.style.maxHeight = "0";
+          i.classList.remove("active");
+      });
   }
 });
 
