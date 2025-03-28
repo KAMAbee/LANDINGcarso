@@ -1730,35 +1730,72 @@ html {
                     }
                 }
             }
+
+            &-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                text-decoration: none;
+                background: #FFDE00;
+                color: #000;
+                font-size: 16px;
+                font-weight: 700;
+                border: none;
+                width: 60%;
+                height: 55px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 40px;
+                cursor: pointer;
+                transition: background 0.3s;
+                align-self: center;
+
+                &:hover {
+                    background: #FFE251;
+                    color: #222222;
+                }
+
+                &:active {
+                    background: #F1D545;
+                    color: #222222;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1110px) {
+        .main__cities-in-desc {
+            width: auto;
+        }
+    }
+
+    @media (max-width: 728px) {
+        .main__cities-in-title {
+            text-align: center;
         }
 
-        @media (max-width: 1110px) {
-            .main__cities-in-desc {
-                width: auto;
-            }
+        .main__cities-in-desc {
+            text-align: center;
         }
 
-        @media (max-width: 728px) {
-            .main__cities-in-title {
-                text-align: center;
-            }
+        .main__cities-in {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-            .main__cities-in-desc {
-                text-align: center;
-            }
+        .main__cities-in-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
 
-            .main__cities-in {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .main__cities-in-items {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-            }
+        .main__cities-in-button {
+            width: 80%
         }
     }
 
@@ -2372,11 +2409,11 @@ html {
             gap: 20px;
         }
 
-        .footer__in-partners-title{
+        .footer__in-partners-title {
             text-align: center;
         }
 
-        .footer__in-partners-desc{
+        .footer__in-partners-desc {
             text-align: center;
         }
     }

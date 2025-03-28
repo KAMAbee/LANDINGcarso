@@ -1223,23 +1223,52 @@ html {
         border-radius: 8px 8px 0 0; }
       .main__cities-in-item.active .main__cities-in-item-header-arrow {
         transform: rotate(180deg); }
-    @media (max-width: 1110px) {
-      .main__cities .main__cities-in-desc {
-        width: auto; } }
-    @media (max-width: 728px) {
-      .main__cities .main__cities-in-title {
-        text-align: center; }
-      .main__cities .main__cities-in-desc {
-        text-align: center; }
-      .main__cities .main__cities-in {
+      .main__cities-in-button {
         display: flex;
-        flex-direction: column;
-        align-items: center; }
-      .main__cities .main__cities-in-items {
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        width: 100%; } }
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        background: #FFDE00;
+        color: #000;
+        font-size: 16px;
+        font-weight: 700;
+        border: none;
+        width: 60%;
+        height: 55px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        cursor: pointer;
+        transition: background 0.3s;
+        align-self: center; }
+        .main__cities-in-button:hover {
+          background: #FFE251;
+          color: #222222; }
+        .main__cities-in-button:active {
+          background: #F1D545;
+          color: #222222; }
+  @media (max-width: 1110px) {
+    .main .main__cities-in-desc {
+      width: auto; } }
+  @media (max-width: 728px) {
+    .main .main__cities-in-title {
+      text-align: center; }
+    .main .main__cities-in-desc {
+      text-align: center; }
+    .main .main__cities-in {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .main .main__cities-in-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; }
+    .main .main__cities-in-button {
+      width: 80%; } }
   .main__comments {
     width: 100%;
     background-color: #FFF;
