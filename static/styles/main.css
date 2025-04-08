@@ -48,7 +48,7 @@ html {
     width: 100%;
     background-color: #fff; }
     .header__top-logo {
-      height: 40px; }
+      height: 46px; }
     .header__top-button {
       text-decoration: none;
       display: flex;
@@ -1613,7 +1613,7 @@ html {
         text-decoration: underline;
         color: #0954b7; }
     .footer__in-logo {
-      height: 40px; }
+      height: 50px; }
     .footer__in-privacy {
       color: #000;
       font-size: 12px;
