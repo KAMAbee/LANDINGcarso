@@ -144,6 +144,9 @@ html {
     }
 
     @media (max-width: 1170px) {
+        .header__top-logo {
+            height: 40px;
+        }
 
         .header__nav {
             display: none;
@@ -156,6 +159,19 @@ html {
 
         .header__top {
             width: 100%;
+        }
+    }
+
+
+    @media (max-width: 600px) {
+        .header__top-logo {
+            height: 34px;
+        }
+    }
+
+    @media (max-width: 300px) {
+        .header__top-logo {
+            height: 30px;
         }
     }
 }
