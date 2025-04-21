@@ -730,6 +730,8 @@ html {
       display: flex;
       flex-direction: column;
       gap: 0px; }
+    .main .main__cars-in-title {
+      text-align: center; }
     .main .main__cars-in-img {
       display: none; }
     .main .main__cars-in-img-wrap {
