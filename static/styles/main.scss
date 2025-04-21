@@ -38,12 +38,12 @@ html {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.98); // Слегка прозрачный для эффекта стекла
+    background-color: rgba(255, 255, 255, 0.98); 
     position: fixed;
     z-index: 1000;
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-    backdrop-filter: blur(8px); // Создает эффект матового стекла
+    backdrop-filter: blur(8px); 
     -webkit-backdrop-filter: blur(8px);
   
     &__in {
@@ -190,7 +190,6 @@ html {
       }
     }
   
-    // Уменьшение размера хедера при прокрутке
     &.scrolled {
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
       
@@ -212,7 +211,6 @@ html {
       }
     }
   
-    // Мобильные стили
     @media (max-width: 1170px) {
       .header__top-logo {
         height: 40px;
@@ -229,7 +227,7 @@ html {
       }
       
       .header__nav {
-        display: none; // Скрываем навигацию на маленьких экранах
+        display: none; 
         
         &-mobile {
           display: flex;
@@ -525,12 +523,12 @@ html {
 
                 @media (max-width: 992px) {
                     width: 100%;
-                    max-width: 240px; // Уменьшено с 320px до 240px
+                    max-width: 240px;
                     margin: 0 auto 30px;
                 }
 
                 @media (max-width: 480px) {
-                    max-width: 180px; // Еще меньше для малых экранов
+                    max-width: 180px;
                 }
 
                 &-slider {
@@ -543,18 +541,18 @@ html {
 
                     @media (max-width: 992px) {
                         height: auto;
-                        border-radius: 8px; // Уменьшенный радиус скругления
+                        border-radius: 8px;
                     }
 
                     .swiper-slide {
                         padding: 10px;
 
                         @media (max-width: 768px) {
-                            padding: 6px; // Уменьшенные отступы
+                            padding: 6px;
                         }
 
                         @media (max-width: 480px) {
-                            padding: 4px; // Еще меньше отступы
+                            padding: 4px;
                         }
 
                         height: auto;
@@ -571,7 +569,7 @@ html {
                         gap: 8px;
 
                         @media (max-width: 480px) {
-                            gap: 4px; // Меньший отступ
+                            gap: 4px;
                         }
 
                         &-wrapper {
@@ -581,14 +579,14 @@ html {
                             border-radius: 8px;
                             overflow: hidden;
                             cursor: pointer;
-                            max-height: 600px; // Установка максимальной высоты
+                            max-height: 600px;
 
                             @media (max-width: 992px) {
-                                max-height: 70vh; // Ограничение высоты 70% от высоты экрана
+                                max-height: 70vh;
                             }
 
                             @media (max-width: 480px) {
-                                max-height: 60vh; // Еще меньше для маленьких экранов
+                                max-height: 60vh;
                             }
                         }
 
@@ -1179,8 +1177,6 @@ html {
         }
 
 
-
-        // Mobile styles - small tablets and large phones
         @media (max-width: 768px) {
 
             &-in {
@@ -1253,7 +1249,6 @@ html {
             }
         }
 
-        // Mobile styles - small phones
         @media (max-width: 480px) {
             padding: 0px;
 
@@ -1302,7 +1297,7 @@ html {
 
 
     &__coverage {
-        background-color: #f8f9fc; // Keeping the original background color
+        background-color: #f8f9fc;
         padding: 70px 0;
         width: 100%;
 
@@ -2833,7 +2828,7 @@ html {
                                 border: none;
                                 border-radius: 4px;
                                 margin: 0;
-                                background-color: #ff5252; // Более мягкий красный цвет
+                                background-color: #ff5252;
                             }
     
                             &-carso {
@@ -3079,7 +3074,6 @@ html {
 
         &-block {
             flex: 1;
-            /* Каждый блок занимает равную часть доступного пространства */
             background-color: #f0f4f9;
             border-radius: 8px;
             overflow: hidden;
@@ -3106,7 +3100,6 @@ html {
                 width: 36px;
                 height: 36px;
                 min-width: 36px;
-                /* Предотвращает сжатие иконки */
                 background: #FFDE59;
                 border-radius: 50%;
                 display: flex;
@@ -3289,7 +3282,7 @@ html {
         &-card {
             opacity: 0;
             transform: translateY(30px);
-            transition: transform 0.8s ease, opacity 0.8s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
 
             &.show {
                 opacity: 1;
@@ -3299,7 +3292,7 @@ html {
             &-image {
                 opacity: 0;
                 transform: translateY(20px);
-                transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s;
+                transition: transform 0.2s ease 0.2s, opacity 0.2s ease 0.2s;
 
                 &.show {
                     opacity: 1;
@@ -3310,7 +3303,7 @@ html {
             &-feature {
                 opacity: 0;
                 transform: translateX(-20px);
-                transition: transform 0.5s ease, opacity 0.5s ease;
+                transition: transform 0.1s ease, opacity 0.1s ease;
                 transition-delay: calc(var(--index, 0) * 100ms + 300ms);
 
                 &.show {
@@ -3330,7 +3323,7 @@ html {
             &-specs {
                 opacity: 0;
                 transform: translateY(15px);
-                transition: transform 0.2s ease 0.1s, opacity 0.2s ease 0.1s;
+                transition: transform 0.1s ease 0.05s, opacity 0.1s ease 0.05s;
 
                 &.show {
                     opacity: 1;
@@ -3341,7 +3334,7 @@ html {
             &-button {
                 opacity: 0;
                 transform: translateY(10px);
-                transition: transform 0.2s ease 0.2s, opacity 0.2s ease 0.2s, background-color 0.1s ease, box-shadow 0.1s ease;
+                transition: transform 0.1s ease 0.1s, opacity 0.1s ease 0.1s, background-color 0.05s ease, box-shadow 0.1s ease;
 
                 &.show {
                     opacity: 1;
