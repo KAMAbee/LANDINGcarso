@@ -3551,3 +3551,37 @@ html {
         display: none;
     }
 }
+
+@supports (-webkit-touch-callout: none) {
+    .main__cities-in-item-content {
+      transition: none !important;
+      max-height: 0;
+      overflow: hidden;
+    }
+  
+    .main__cities-in-item.active .main__cities-in-item-content {
+      max-height: 300px !important;
+    }
+    
+    /* Optional: if other animations are also problematic */
+    .main__varanty-in-cards-item,
+    .main__works-in-cards-item,
+    .main__cars-in-cells-item,
+    .main__connect-in-cards-item,
+    .main__tariffs-card,
+    .main__tariffs-card-image,
+    .main__tariffs-card-feature,
+    .main__tariffs-card-specs,
+    .main__tariffs-card-button {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
