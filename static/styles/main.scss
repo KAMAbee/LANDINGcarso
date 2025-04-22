@@ -421,7 +421,6 @@ html {
             &-title {
                 font-weight: 700;
                 font-size: 32px;
-                line-height: 38px;
                 color: #000;
                 text-align: left;
             }
@@ -706,6 +705,11 @@ html {
 
 
         @media (max-width: 768px) {
+            .main__varanty-in-title{
+                text-align: center;
+                font-size: 24px;
+            }
+
             .main__varanty-in-cards {
                 grid-template-columns: 1fr;
             }
@@ -869,7 +873,6 @@ html {
             &-title {
                 font-weight: 700;
                 font-size: 30px;
-                line-height: 38px;
                 color: #000;
                 text-align: left;
             }
@@ -1015,6 +1018,7 @@ html {
         }
 
         .main__cars-in-title{
+            font-size: 24px;
             text-align: center;
         }
 
@@ -1191,6 +1195,7 @@ html {
                 &-title {
                     font-size: 28px;
                     margin-bottom: 32px;
+                    text-align: center;
                 }
 
                 &-cards {
@@ -1259,6 +1264,7 @@ html {
 
         @media (max-width: 480px) {
             padding: 0px;
+            padding-top:40px ;
 
             &-in {
                 &-title {
@@ -1325,6 +1331,10 @@ html {
             font-weight: 700;
             color: #000;
             margin-bottom: 15px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
         }
 
         &-subtitle {
@@ -1594,7 +1604,6 @@ html {
             &-title {
                 font-weight: 700;
                 font-size: 32px;
-                line-height: 38px;
                 color: #000;
                 text-align: left;
             }
@@ -1611,8 +1620,7 @@ html {
                 &-item {
                     font-weight: 700;
                     font-size: 16px;
-                    line-height: 38px;
-                    color: #000;
+                        color: #000;
                     text-align: left;
                     height: 55px;
                     padding: 0px 22px;
@@ -1847,6 +1855,10 @@ html {
         }
 
         @media (max-width: 768px) {
+            .main__connect-in-title{
+                font-size: 24px;
+            }
+
             .main__connect-in-cards {
                 grid-template-columns: 100%;
                 grid-template-rows: repeat(3, auto);
@@ -2138,7 +2150,7 @@ html {
     @media (max-width: 480px) {
         .main__tariffs {
             &-title {
-                font-size: 26px;
+                font-size: 24px;
             }
 
             &-subtitle {
@@ -2192,7 +2204,6 @@ html {
             &-title {
                 font-weight: 700;
                 font-size: 32px;
-                line-height: 38px;
                 color: #000;
                 text-align: left;
             }
@@ -2255,6 +2266,7 @@ html {
         }
 
         .main__check-in-title {
+            font-size: 24px;
             text-align: center;
         }
 
@@ -2281,7 +2293,6 @@ html {
             &-title {
                 font-weight: 700;
                 font-size: 32px;
-                line-height: 38px;
                 color: #000;
                 text-align: left;
             }
@@ -2381,6 +2392,7 @@ html {
         }
 
         .main__area-in-title {
+            font-size: 24px;
             text-align: center;
         }
 
@@ -2408,7 +2420,6 @@ html {
             &-title {
                 font-weight: 700;
                 font-size: 32px;
-                line-height: 38px;
                 color: #000;
                 text-align: left;
             }
@@ -3021,6 +3032,7 @@ html {
             width: 100%;
             border-radius: 0;
             background-color: #f0f4f9;
+            padding: 40px 10px;
         }
 
         .main__help-content {
@@ -3036,6 +3048,14 @@ html {
         .main__help-title,
         .main__help-description {
             text-align: center;
+        }
+
+        .main__help-title{
+            font-size: 24px;
+        }
+
+        .main__help-description {
+            font-size: 18px;
         }
     }
 
@@ -3529,10 +3549,16 @@ html {
 
         .footer__in-partners-title {
             text-align: center;
+            font-size: 24px;
         }
 
         .footer__in-partners-desc {
             text-align: center;
+            font-size: 18px;
+        }
+
+        .footer__in-partners-desc-ul {
+            font-size: 16px;
         }
     }
 
