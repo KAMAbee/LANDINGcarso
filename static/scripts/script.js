@@ -237,7 +237,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
       }
       
-      console.log("Services slider initialized successfully");
     } catch (error) {
       console.error("Error initializing services slider:", error);
     }
