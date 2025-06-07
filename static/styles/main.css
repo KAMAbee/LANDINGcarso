@@ -289,6 +289,8 @@ html {
             margin-bottom: 10px; }
           .main__question-in-text {
             margin-bottom: 16px; }
+          .main__question-in-title {
+            font-size: 18px; }
           .main__question-in-button {
             width: 100%; } }
   .main__varanty {
