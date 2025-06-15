@@ -401,3 +401,58 @@ document.addEventListener('DOMContentLoaded', function() {
   adjustVideoHeight();
   window.addEventListener('resize', adjustVideoHeight);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const teamSwiper = new Swiper(".main__team-slider", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        speed: 500,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    const teamNextBtn = document.querySelector(".main__team-slider .team-button-next");
+    const teamPrevBtn = document.querySelector(".main__team-slider .team-button-prev");
+
+    if (teamNextBtn) {
+        teamNextBtn.addEventListener("click", () => {
+            teamSwiper.slideNext();
+        });
+    }
+
+    if (teamPrevBtn) {
+        teamPrevBtn.addEventListener("click", () => {
+            teamSwiper.slidePrev();
+        });
+    }
+
+    // Intersection Observer for animation
+    const teamCards = document.querySelectorAll(".main__team-card");
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add("show");
+                    }, index * 200);
+                }
+            });
+        },
+        { threshold: 0.05 }
+    );
+
+    teamCards.forEach((card) => observer.observe(card));
+});
