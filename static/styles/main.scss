@@ -3785,7 +3785,18 @@ html {
 }
 
 @supports (-webkit-touch-callout: none) {
-    * {
+    // Оставляем переходы для кнопок навигации
+    .team-button-prev,
+    .team-button-next,
+    .services-button-prev,
+    .services-button-next {
+        transition: all 0.3s !important;
+        animation: all 0.3s !important;
+    }
+    
+    // Для остальных элементов отключаем анимации
+    /* Изменяем селектор, чтобы он не затрагивал кнопки */
+    *:not(.team-button-prev):not(.team-button-next):not(.services-button-prev):not(.services-button-next) {
         transition: none !important;
         animation: none !important;
     }
