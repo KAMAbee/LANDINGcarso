@@ -3783,10 +3783,3 @@ html {
         transition: none !important;
     }
 }
-
-@supports (-webkit-touch-callout: none) {
-    * {
-        transition: none !important;
-        animation: none !important;
-    }
-}
