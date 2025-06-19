@@ -1573,8 +1573,6 @@ html {
           background: #F1D545;
           color: #222222; }
   @media (max-width: 1110px) {
-    .main .main__check {
-      padding-bottom: 0px; }
     .main .main__check-in-wrap {
       display: flex;
       flex-direction: column;
@@ -2622,9 +2620,5 @@ html {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important; } }
-@supports (-webkit-touch-callout: none) {
-  * {
-    transition: none !important;
-    animation: none !important; } }
 
 /*# sourceMappingURL=main.css.map */
