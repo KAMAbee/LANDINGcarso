@@ -468,3 +468,5 @@ document.addEventListener("DOMContentLoaded", function () {
   teamCards.forEach((card) => observer.observe(card));
 });
 
+
+
