@@ -60,6 +60,39 @@ html {
         height: 72px;
         width: 100%;
 
+        .header__top-lang {
+            display: inline-flex;
+            border: 2px solid #ccc;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lang-btn img {
+            width: 24px;
+            height: 24px;
+            transition: filter 0.3s, opacity 0.3s;
+            filter: brightness(0.9) saturate(0);
+            opacity: 0.9;
+        }
+
+        .lang-btn.active img {
+            filter: none;
+            opacity: 1;
+        }
+
+
         &-logo {
             height: 46px;
             transition: transform 0.3s ease;
@@ -2277,7 +2310,7 @@ html {
         }
     }
 
-   
+
 
     &__area {
         width: 100%;
@@ -3010,7 +3043,7 @@ html {
 
         &-button {
             display: inline-block;
-            background-color: #FFDE59;
+            background-color: #25D366;
             color: #000;
             font-size: 18px;
             font-weight: 600;
@@ -3018,6 +3051,10 @@ html {
             border-radius: 8px;
             text-decoration: none;
             transition: background-color 0.2s ease;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:hover {
                 background-color: #FFE251;

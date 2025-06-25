@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Гарантия Carso.kz на автомобили. Экономия до 3 000 000 ₸ на ремонте автомобиля. ">
+    <meta name="description" content="Гарантия Carso.kz на автомобили. Экономия до 3 000 000 ₸ на ремонте автомобиля. "
+        data-i18n="meta.description">
     <meta name="keywords"
         content="carso.kz, Carso.kz, карсо.кз, Карсо.кз, Carso, carso, carsokz, carso kz, карсо, карсо кз, кз, сарсо, сарсо кз, Карсо, касро кз, гарантия, автомобили, ремонт, сервис, машины, Казахстан, экономия, узлы, агрегаты,">
     <meta name="author" content="Carso.kz">
@@ -18,7 +19,8 @@
     <meta name="facebook-domain-verification" content="0embrei28nhksjvs1nbb49p4j3aqzo" />
 
 
-    <title>Гарантия Carso.kz на автомобили</title>
+    <title data-i18n="meta.title">Гарантия Carso.kz на автомобили</title>
+
 
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -60,9 +62,17 @@
             <div class="header__top">
                 <img class="header__top-logo" src="static/images/carsoLogo.png" alt="Carso.kz — Гарантийная компания">
 
-                <a target="_blank" href="
-                https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0A"
-                    class="header__top-button">Связаться</a>
+                <div class="header__top-lang">
+                    <button class="lang-btn" data-lang="ru" aria-label="Русский язык">
+                        <img src="static/images/ru.png" alt="RU" />
+                    </button>
+                    <button class="lang-btn" data-lang="kz" aria-label="Қазақ тілі">
+                        <img src="static/images/kz.png" alt="KZ" />
+                    </button>
+                </div>
+
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0A"
+                    class="header__top-button" data-i18n="header.contact" data-i18n-href="whatsappLink">Связаться</a>
 
             </div>
 
@@ -70,17 +80,18 @@
 
 
             <div class="header__nav">
-                <a href="#whatIsCarso" class="header__nav-link">Что такое Carso.kz?</a>
-                <a href="#whatIsVaranty" class="header__nav-link">Гарантия</a>
-                <a href="#howWorks" class="header__nav-link">Как работает?</a>
-                <a href="#varantySpread" class="header__nav-link">Что охватывает?</a>
-                <a href="#whatCovers" class="header__nav-link">Что покрывает?</a>
-                <a href="#howConnect" class="header__nav-link">Как подключить?</a>
-                <a href="#tariffs" class="header__nav-link">Тарифы</a>
-                <a href="#KZarea" class="header__nav-link">Где действует?</a>
-                <a href="#avtoservices" class="header__nav-link">Автосервисы</a>
-                <a href="#comments" class="header__nav-link">Отзывы</a>
-                <a href="#partners" class="header__nav-link">Партнёры</a>
+                <a href="#whatIsCarso" class="header__nav-link" data-i18n="header.nav.whatIs">Что такое Carso.kz?</a>
+                <a href="#whatIsVaranty" class="header__nav-link" data-i18n="header.nav.warranty">Гарантия</a>
+                <a href="#howWorks" class="header__nav-link" data-i18n="header.nav.howWorks">Как работает?</a>
+                <a href="#varantySpread" class="header__nav-link" data-i18n="header.nav.whatCovers">Что охватывает?</a>
+                <a href="#whatCovers" class="header__nav-link" data-i18n="header.nav.whatProtects">Что покрывает?</a>
+                <a href="#howConnect" class="header__nav-link" data-i18n="header.nav.howConnect">Как подключить?</a>
+                <a href="#tariffs" class="header__nav-link" data-i18n="header.nav.tariffs">Тарифы</a>
+                <a href="#KZarea" class="header__nav-link" data-i18n="header.nav.whereWorks">Где действует?</a>
+                <a href="#avtoservices" class="header__nav-link" data-i18n="header.nav.carServices"
+                    data-i18n="cities.service">Автосервисы</a>
+                <a href="#comments" class="header__nav-link" data-i18n="header.nav.reviews">Отзывы</a>
+                <a href="#partners" class="header__nav-link" data-i18n="header.nav.partners">Партнёры</a>
             </div>
         </div>
     </header>
@@ -90,7 +101,7 @@
         <section class="main__question" id="whatIsCarso">
             <a target="_blank"
                 href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AУ%20Меня%20есть%20вопрос:"
-                class="main__question-in">
+                class="main__question-in" data-i18n-href="whatsappQuestionLink">
                 <div class="main__question-in-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -101,8 +112,10 @@
                 </div>
                 <div class="main__question-in-text">
 
-                    <div class="main__question-in-title">Нужна консультация по гарантии?</div>
-                    <div class="main__question-in-desc">Наши специалисты готовы ответить на все ваши вопросы</div>
+                    <div class="main__question-in-title" data-i18n="consulting.title">Нужна консультация по гарантии?
+                    </div>
+                    <div class="main__question-in-desc" data-i18n="consulting.description">Наши специалисты готовы
+                        ответить на все ваши вопросы</div>
                 </div>
                 <button class="main__question-in-button">
                     <span class="button-icon">
@@ -111,18 +124,19 @@
                                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                         </svg>
                     </span>
-                    Связаться с нами
+
+                    <div data-i18n="consulting.contactButton">Связаться с нами</div>
                 </button>
             </a>
         </section>
 
         <section class="main__varanty" id="whatIsVaranty">
             <div class="main__varanty-in">
-                <div class="main__varanty-in-title">
+                <div class="main__varanty-in-title" data-i18n="aboutWarranty.title">
                     Что такое гарантия Carso.kz?
                 </div>
 
-                <div class="main__varanty-in-desc">
+                <div class="main__varanty-in-desc" data-i18n="aboutWarranty.description">
                     Гарантия Carso.kz позволяет автовладельцу сэкономить до <b>3&nbsp;000&nbsp;000₸</b>, покрывая
                     ключевые
                     узлы: двигатель
@@ -162,8 +176,8 @@
 
                     <div class="main__varanty-in-cards">
                         <div class="main__varanty-in-cards-item">
-                            <div class="main__varanty-in-cards-item-text">
-                                <span>Снижение затрат<br>при поломках автомобиля</span>
+                            <div class="main__varanty-in-cards-item-text" data-i18n="aboutWarranty.benefits.cost">
+                                Снижение затрат<br>при поломках автомобиля
                             </div>
                             <div class="main__varanty-in-cards-item-icon">
                                 <img src="static/images/bank.png" class="main__varanty-in-cards-item-icon-img"
@@ -172,8 +186,8 @@
                         </div>
 
                         <div class="main__varanty-in-cards-item">
-                            <div class="main__varanty-in-cards-item-text">
-                                <span>Поддержка<br>на каждом этапе ремонта</span>
+                            <div class="main__varanty-in-cards-item-text" data-i18n="aboutWarranty.benefits.support">
+                                Поддержка<br>на каждом этапе ремонта
                             </div>
                             <div class="main__varanty-in-cards-item-icon">
                                 <img src="static/images/car.png" class="main__varanty-in-cards-item-icon-img"
@@ -182,8 +196,8 @@
                         </div>
 
                         <div class="main__varanty-in-cards-item">
-                            <div class="main__varanty-in-cards-item-text">
-                                <span>Продлённый период<br>обслуживания авто</span>
+                            <div class="main__varanty-in-cards-item-text" data-i18n="aboutWarranty.benefits.extended">
+                                Продлённый период<br>обслуживания авто
                             </div>
                             <div class="main__varanty-in-cards-item-icon">
                                 <img src="static/images/+1.png" class="main__varanty-in-cards-item-icon-img img-1"
@@ -192,8 +206,8 @@
                         </div>
 
                         <div class="main__varanty-in-cards-item">
-                            <div class="main__varanty-in-cards-item-text">
-                                <span>Действие<br>по всей территории Казахстана</span>
+                            <div class="main__varanty-in-cards-item-text" data-i18n="aboutWarranty.benefits.nationwide">
+                                Действие<br>по всей территории Казахстана
                             </div>
                             <div class="main__varanty-in-cards-item-icon">
                                 <img src="static/images/map.png" class="main__varanty-in-cards-item-icon-img"
@@ -206,7 +220,7 @@
             </div>
         </section>
 
-        <!-- Video Modal -->
+        <!-- Видео Модалка -->
         <div class="video-modal">
             <div class="video-modal-content">
                 <div class="video-modal-close"></div>
@@ -216,7 +230,7 @@
 
         <section class="main__works" id="howWorks">
             <div class="main__works-in">
-                <div class="main__works-in-title">
+                <div class="main__works-in-title" data-i18n="howWorks.title">
                     Как работает гарантия Carso.kz?
                 </div>
 
@@ -226,7 +240,8 @@
                         <div class="icon-container">
                             <img src="static/images/carOnTrack.png" alt="Поломка авто">
                         </div>
-                        <div class="step-text">С автомобилем произошла неисправность</div>
+                        <div class="step-text" data-i18n="howWorks.steps.step1">С автомобилем произошла неисправность
+                        </div>
                     </div>
 
                     <div class="main__works-in-cards-item">
@@ -234,7 +249,7 @@
                         <div class="icon-container">
                             <img class="img-phone" src="static/images/phone.png" alt="Звонок">
                         </div>
-                        <div class="step-text">
+                        <div class="step-text" data-i18n="howWorks.steps.step2">
                             Свяжитесь с нами по <br><a href="tel:+77082407229">8 (708) 240-72-29</a>
                         </div>
                     </div>
@@ -244,7 +259,8 @@
                         <div class="icon-container">
                             <img class="img-service" src="static/images/service.png" alt="Сервис">
                         </div>
-                        <div class="step-text">Мы организуем ремонт в ближайшем сервисе</div>
+                        <div class="step-text" data-i18n="howWorks.steps.step3">Мы организуем ремонт в ближайшем сервисе
+                        </div>
                     </div>
 
                     <div class="main__works-in-cards-item">
@@ -252,7 +268,8 @@
                         <div class="icon-container">
                             <img class="img-tenge" src="static/images/tenge.png" alt="Оплата">
                         </div>
-                        <div class="step-text">Carso.kz оплачивает ремонт по гарантии</div>
+                        <div class="step-text" data-i18n="howWorks.steps.step4">Carso.kz оплачивает ремонт по гарантии
+                        </div>
                     </div>
                 </div>
             </div>
@@ -261,14 +278,14 @@
         <section class="main__cars" id="varantySpread">
             <div class="main__cars-in">
                 <div class="main__cars-in-wrap">
-                    <h1 class="main__cars-in-title">
+                    <h1 class="main__cars-in-title" data-i18n="forCars.title">
                         Гарантия Carso.kz распространяется <br> на автомобили:
                     </h1>
 
                     <div class="main__cars-in-cells">
                         <div class="main__cars-in-cells-item">
                             <div class="main__cars-in-cells-item-badge">
-                                <span>МАРКИ</span>
+                                <span data-i18n="forCars.brands.badge">МАРКИ</span>
                             </div>
                             <div class="main__cars-in-cells-item-content">
                                 <div class="main__cars-in-cells-item-icon">
@@ -278,10 +295,10 @@
                                     </svg>
                                 </div>
                                 <div class="main__cars-in-cells-item-info">
-                                    <h3 class="main__cars-in-cells-item-title">
+                                    <h3 class="main__cars-in-cells-item-title" data-i18n="forCars.brands.title">
                                         Все марки и модели
                                     </h3>
-                                    <p class="main__cars-in-cells-item-desc">
+                                    <p class="main__cars-in-cells-item-desc" data-i18n="forCars.brands.description">
                                         без исключений
                                     </p>
                                 </div>
@@ -290,7 +307,7 @@
 
                         <div class="main__cars-in-cells-item">
                             <div class="main__cars-in-cells-item-badge">
-                                <span>ПРОБЕГ</span>
+                                <span data-i18n="forCars.mileage.badge">ПРОБЕГ</span>
                             </div>
                             <div class="main__cars-in-cells-item-content">
                                 <div class="main__cars-in-cells-item-icon">
@@ -301,10 +318,10 @@
                                     </svg>
                                 </div>
                                 <div class="main__cars-in-cells-item-info">
-                                    <h3 class="main__cars-in-cells-item-title">
+                                    <h3 class="main__cars-in-cells-item-title" data-i18n="forCars.mileage.title">
                                         до 300&nbsp;000 км
                                     </h3>
-                                    <p class="main__cars-in-cells-item-desc">
+                                    <p class="main__cars-in-cells-item-desc" data-i18n="forCars.mileage.description">
                                         пробег автомобиля
                                     </p>
                                 </div>
@@ -313,7 +330,7 @@
 
                         <div class="main__cars-in-cells-item">
                             <div class="main__cars-in-cells-item-badge">
-                                <span>ВОЗРАСТ</span>
+                                <span data-i18n="forCars.age.badge">ВОЗРАСТ</span>
                             </div>
                             <div class="main__cars-in-cells-item-content">
                                 <div class="main__cars-in-cells-item-icon">
@@ -325,10 +342,10 @@
                                     </svg>
                                 </div>
                                 <div class="main__cars-in-cells-item-info">
-                                    <h3 class="main__cars-in-cells-item-title">
+                                    <h3 class="main__cars-in-cells-item-title" data-i18n="forCars.age.title">
                                         до 20 лет
                                     </h3>
-                                    <p class="main__cars-in-cells-item-desc">
+                                    <p class="main__cars-in-cells-item-desc" data-i18n="forCars.age.description">
                                         возраст автомобиля
                                     </p>
                                 </div>
@@ -337,10 +354,9 @@
                     </div>
 
                     <a target="_blank"
-                        href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AХочу%20оформить%20гарантию%20"
-                        class="main__cars-in-button">
-                        Оформить гарантию
-                    </a>
+                        href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AХочу%20оформить%20гарантию"
+                        class="main__cars-in-button" data-i18n="forCars.applyButton"
+                        data-i18n-href="whatsappApplyLink">Оформить гарантию</a>
                 </div>
 
                 <img src="static/images/home_distribution.png" alt="" class="main__cars-in-img">
@@ -350,8 +366,9 @@
         <section class="main__coverage" id="whatCovers">
             <div class="main__coverage-container">
                 <div class="main__coverage-header">
-                    <h2 class="main__coverage-title">Что покрывает гарантия Carso.kz</h2>
-                    <p class="main__coverage-subtitle">Наша защита распространяется на ключевые узлы и агрегаты вашего
+                    <h2 class="main__coverage-title" data-i18n="coverage.title">Что покрывает гарантия Carso.kz</h2>
+                    <p class="main__coverage-subtitle" data-i18n="coverage.subtitle">Наша защита распространяется на
+                        ключевые узлы и агрегаты вашего
                         автомобиля</p>
                 </div>
 
@@ -377,23 +394,27 @@
                         </div>
                         <div class="main__coverage-info">
                             <div class="main__coverage-description active" data-category="engine">
-                                <h3>Двигатель</h3>
-                                <p>Полная защита ключевых компонентов двигателя, включая блок цилиндров, коленвал и
+                                <h3 data-i18n="coverage.categories.engine.title">Двигатель</h3>
+                                <p data-i18n="coverage.categories.engine.description">Полная защита ключевых компонентов
+                                    двигателя, включая блок цилиндров, коленвал и
                                     систему смазки.</p>
                             </div>
                             <div class="main__coverage-description" data-category="transmission">
-                                <h3>Трансмиссия</h3>
-                                <p>Гарантия на КПП и редуктор обеспечивает защиту от дорогостоящих поломок трансмиссии.
+                                <h3 data-i18n="coverage.categories.transmission.title">Трансмиссия</h3>
+                                <p data-i18n="coverage.categories.transmission.description">Гарантия на КПП и редуктор
+                                    обеспечивает защиту от дорогостоящих поломок трансмиссии.
                                 </p>
                             </div>
                             <div class="main__coverage-description" data-category="turbo">
-                                <h3>Турбина</h3>
-                                <p>Компрессор, турбонагреватель и все связанные компоненты находятся под надежной
+                                <h3 data-i18n="coverage.categories.turbo.title">Турбина</h3>
+                                <p data-i18n="coverage.categories.turbo.description">Компрессор, турбонагреватель и все
+                                    связанные компоненты находятся под надежной
                                     защитой.</p>
                             </div>
                             <div class="main__coverage-description" data-category="other">
-                                <h3>Электрика и системы</h3>
-                                <p>Генератор, стартер, кондиционер и другие важные системы вашего автомобиля под защитой
+                                <h3 data-i18n="coverage.categories.other.title">Электрика и системы</h3>
+                                <p data-i18n="coverage.categories.other.description">Генератор, стартер, кондиционер и
+                                    другие важные системы вашего автомобиля под защитой
                                     Carso.kz</p>
                             </div>
                         </div>
@@ -407,7 +428,7 @@
                                         d="M7 4v2h3v2H6v3H4v3h2v3h4v2h3v-2h3v2h2v-3h2v-3h-2V9h-3V7h3V5h-2V2h-3v2H9V2H6v2H7zm9 9v-3h-3V7H9v3H6v3h3v3h4v-3h3z" />
                                 </svg>
                             </div>
-                            <span>Двигатель</span>
+                            <span data-i18n="coverage.categoryLabels.engine">Двигатель</span>
                         </div>
                         <div class="main__coverage-category" data-target="transmission">
                             <div class="main__coverage-category-icon">
@@ -416,7 +437,7 @@
                                     <path d="M12 8v8M8 12h8" />
                                 </svg>
                             </div>
-                            <span>КПП и редуктор</span>
+                            <span data-i18n="coverage.categoryLabels.transmission">КПП и редуктор</span>
                         </div>
                         <div class="main__coverage-category" data-target="turbo">
                             <div class="main__coverage-category-icon">
@@ -425,7 +446,7 @@
                                     <circle cx="12" cy="12" r="4" />
                                 </svg>
                             </div>
-                            <span>Компрессор/Турбо</span>
+                            <span data-i18n="coverage.categoryLabels.turbo">Компрессор/Турбо</span>
                         </div>
                         <div class="main__coverage-category" data-target="other">
                             <div class="main__coverage-category-icon">
@@ -433,25 +454,29 @@
                                     <path d="M4 21v-7m4 7v-7m4 7v-7m4 7v-7m4 7v-7M12 7a4 4 0 100-8 4 4 0 000 8z" />
                                 </svg>
                             </div>
-                            <span>Другие компоненты</span>
+                            <span data-i18n="coverage.categoryLabels.other">Другие компоненты</span>
                         </div>
                     </div>
 
                     <div class="main__coverage-parts">
-                        <div class="main__coverage-parts-title">Полный список покрываемых узлов:</div>
+                        <div class="main__coverage-parts-title" data-i18n="coverage.partsList">Полный список покрываемых
+                            узлов:</div>
                         <div class="main__coverage-parts-grid">
-                            <div class="main__coverage-part">Двигатель</div>
-                            <div class="main__coverage-part">КПП</div>
-                            <div class="main__coverage-part">Компрессор/Турбонагреватель</div>
-                            <div class="main__coverage-part">Редуктор</div>
-                            <div class="main__coverage-part">Головка блока цилиндров</div>
-                            <div class="main__coverage-part">Генератор</div>
-                            <div class="main__coverage-part">Радиатор кондиционера</div>
-                            <div class="main__coverage-part">Стартер</div>
-                            <div class="main__coverage-part">Масляный насос</div>
-                            <div class="main__coverage-part">Помпа</div>
-                            <div class="main__coverage-part">Кондиционер</div>
-                            <div class="main__coverage-part">И многие другие...</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.engine">Двигатель</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.transmission">КПП</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.turbo">
+                                Компрессор/Турбонагреватель</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.reducer">Редуктор</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.cylinderHead">Головка блока
+                                цилиндров</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.generator">Генератор</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.acRadiator">Радиатор кондиционера
+                            </div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.starter">Стартер</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.oilPump">Масляный насос</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.waterPump">Помпа</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.airConditioner">Кондиционер</div>
+                            <div class="main__coverage-part" data-i18n="coverage.parts.other">И многие другие...</div>
                         </div>
                     </div>
                 </div>
@@ -460,7 +485,7 @@
 
         <section class="main__connect" id="howConnect">
             <div class="main__connect-in">
-                <div class="main__connect-in-title">
+                <div class="main__connect-in-title" data-i18n="howConnect.title">
                     Как подключить гарантию Carso.kz
                 </div>
 
@@ -468,10 +493,12 @@
                     <div class="main__connect-in-cards-item">
                         <div class="main__connect-in-cards-item-wrap">
                             <div class="main__connect-in-cards-item-title">
-                                <span class="main__connect-in-cards-item-title-number">01</span> Выбор плана
+                                <span class="main__connect-in-cards-item-title-number">01</span>
+                                <div data-i18n="howConnect.steps.step1.title">Выбор плана</div>
                             </div>
 
-                            <div class="main__connect-in-cards-item-desc">
+                            <div class="main__connect-in-cards-item-desc"
+                                data-i18n="howConnect.steps.step1.description">
                                 Ознакомьтесь с доступными тарифами гарантии и оплатите её.
                             </div>
                         </div>
@@ -481,25 +508,30 @@
                     " class="main__connect-in-cards-item card-2">
                         <div class="main__connect-in-cards-item-wrap">
                             <div class="main__connect-in-cards-item-title">
-                                <span class="main__connect-in-cards-item-title-number">02</span> Техосмотр
+                                <span class="main__connect-in-cards-item-title-number">02</span>
+                                <div data-i18n="howConnect.steps.step2.title">Техосмотр</div>
                             </div>
 
-                            <div class="main__connect-in-cards-item-desc">
+                            <div class="main__connect-in-cards-item-desc"
+                                data-i18n="howConnect.steps.step2.description">
                                 Посетите сервисный центр для проведения первичного технического осмотра вашего
                                 автомобиля.
                             </div>
                         </div>
 
-                        <button class="main__connect-in-cards-item-button">Записаться на осмотр</button>
+                        <button class="main__connect-in-cards-item-button"
+                            data-i18n="howConnect.steps.step2.button">Записаться на осмотр</button>
                     </a>
 
                     <div class="main__connect-in-cards-item">
                         <div class="main__connect-in-cards-item-wrap">
                             <div class="main__connect-in-cards-item-title">
-                                <span class="main__connect-in-cards-item-title-number">03</span> Начало действия
+                                <span class="main__connect-in-cards-item-title-number">03</span>
+                                <div data-i18n="howConnect.steps.step3.title">Начало действия</div>
                             </div>
 
-                            <div class="main__connect-in-cards-item-desc">
+                            <div class="main__connect-in-cards-item-desc"
+                                data-i18n="howConnect.steps.step3.description">
                                 Защитное покрытие вступает в силу сразу после завершения осмотра. Ваш автомобиль
                                 обеспечен надежной гарантией.
                             </div>
@@ -513,8 +545,10 @@
         <section class="main__tariffs" id="tariffs">
             <div class="main__tariffs-container">
                 <div class="main__tariffs-header">
-                    <h2 class="main__tariffs-title">Тарифы гарантии Carso.kz для вашего автомобиля</h2>
-                    <p class="main__tariffs-subtitle">Гарантия Carso.kz на автомобили действует в течение опредененного
+                    <h2 class="main__tariffs-title" data-i18n="tariffs.title">Тарифы гарантии Carso.kz для вашего
+                        автомобиля</h2>
+                    <p class="main__tariffs-subtitle" data-i18n="tariffs.subtitle">Гарантия Carso.kz на автомобили
+                        действует в течение опредененного
                         срока
                         или до достижения лимита пробега, в зависимости от того, что произойдет раньше.</p>
                 </div>
@@ -523,7 +557,7 @@
                     <!-- Карточка для авто с пробегом -->
                     <div class="main__tariffs-card">
                         <div class="main__tariffs-card-header">
-                            <h3 class="main__tariffs-card-title">Авто с пробегом</h3>
+                            <h3 class="main__tariffs-card-title" data-i18n="tariffs.usedCar.title">Авто с пробегом</h3>
                             <div class="main__tariffs-card-image">
                                 <img class="car-old" src="static/images/carOld.png" alt="Авто с пробегом">
                             </div>
@@ -537,7 +571,9 @@
                                             <path d="M20 6L9 17l-5-5" />
                                         </svg>
                                     </span>
-                                    <span class="main__tariffs-card-feature-text">Распространяется на все модели и марки
+                                    <span class="main__tariffs-card-feature-text"
+                                        data-i18n="tariffs.usedCar.features.allModels">Распространяется на все модели и
+                                        марки
                                         автомобилей</span>
                                 </div>
                                 <div class="main__tariffs-card-feature">
@@ -546,7 +582,8 @@
                                             <path d="M20 6L9 17l-5-5" />
                                         </svg>
                                     </span>
-                                    <span class="main__tariffs-card-feature-text">Покрывает ремонт двигателя и
+                                    <span class="main__tariffs-card-feature-text"
+                                        data-i18n="tariffs.usedCar.features.coverage">Покрывает ремонт двигателя и
                                         трансмиссии</span>
                                 </div>
                             </div>
@@ -556,7 +593,8 @@
 
                         <div class="main__tariffs-card-footer">
                             <a href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AХочу%20оформить%20гарантию%20на%20мою%20машину%20с%20пробегом%20"
-                                target="_blank" class="main__tariffs-card-button">
+                                target="_blank" class="main__tariffs-card-button" data-i18n="tariffs.usedCar.button"
+                                data-i18n-href="whatsappApplyUsedLink">
                                 Расчитать гарантию
                             </a>
                         </div>
@@ -565,7 +603,7 @@
                     <!-- Карточка для нового авто -->
                     <div class="main__tariffs-card premium">
                         <div class="main__tariffs-card-header">
-                            <h3 class="main__tariffs-card-title">Авто новое</h3>
+                            <h3 class="main__tariffs-card-title" data-i18n="tariffs.newCar.title">Авто новое</h3>
                             <div class="main__tariffs-card-image">
                                 <img class="car-new" src="static/images/carNew.png" alt="Авто новое">
                             </div>
@@ -579,7 +617,9 @@
                                             <path d="M20 6L9 17l-5-5" />
                                         </svg>
                                     </span>
-                                    <span class="main__tariffs-card-feature-text">Распространяется на все модели и марки
+                                    <span class="main__tariffs-card-feature-text"
+                                        data-i18n="tariffs.newCar.features.allModels">Распространяется на все модели и
+                                        марки
                                         автомобилей</span>
                                 </div>
                                 <div class="main__tariffs-card-feature">
@@ -588,7 +628,8 @@
                                             <path d="M20 6L9 17l-5-5" />
                                         </svg>
                                     </span>
-                                    <span class="main__tariffs-card-feature-text">Покрывает ремонт двигателя и
+                                    <span class="main__tariffs-card-feature-text"
+                                        data-i18n="tariffs.newCar.features.coverage">Покрывает ремонт двигателя и
                                         трансмиссии</span>
                                 </div>
                             </div>
@@ -597,7 +638,8 @@
 
                         <div class="main__tariffs-card-footer">
                             <a href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AХочу%20оформить%20гарантию%20на%20мою%20новую%20машину%20"
-                                target="_blank" class="main__tariffs-card-button">
+                                target="_blank" class="main__tariffs-card-button" data-i18n="tariffs.newCar.button"
+                                data-i18n-href="whatsappApplyNewLink">
                                 Расчитать гарантию
                             </a>
                         </div>
@@ -608,13 +650,13 @@
 
         <section class="main__check" id="check">
             <div class="main__check-in">
-                <div class="main__check-in-title">
+                <div class="main__check-in-title" data-i18n="check.title">
                     Проверьте историю своего авто по VIN и госномеру
                 </div>
 
                 <div class="main__check-in-wrap">
 
-                    <div class="main__check-in-text">
+                    <div class="main__check-in-text" data-i18n="check.description">
                         Данные о периодах владения, регионы регистрации,
                         тип владельца (физ. лицо или юр. лицо),
                         список ГРНЗ этого авто.
@@ -627,37 +669,37 @@
                         Узнать количество, даты и суммы правонарушений.
                     </div>
 
-                    <a href="https://corsa.kz/" target="_blank" class="main__check-in-button">Узнать</a>
+                    <a href="https://corsa.kz/" target="_blank" class="main__check-in-button" data-i18n="check.button">Узнать</a>
                 </div>
             </div>
         </section>
 
-        
+
 
 
         <section class="main__area" id="KZarea">
             <div class="main__area-in">
                 <div class="main__area-in-left">
-                    <div class="main__area-in-title">
+                    <div class="main__area-in-title" data-i18n="area.title">
                         Где действует гарантия на автомобили
                     </div>
 
-                    <div class="main__area-in-text">
+                    <div class="main__area-in-text" data-i18n="area.description">
                         Гарантия Carso.kz доступна независимо от того, где вы купили автомобиль или где живёте.
                         <br><br>
                         Сегодня мы обслуживаем авто от Актау&nbsp;до&nbsp;Семея и всегда готовы прийти на помощь —
                         даже в самых отдалённых уголках страны.
                     </div>
 
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AХочу%20оформить%20гарантию%20
-                    " class="main__area-in-button">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AХочу%20оформить%20гарантию
+                    " class="main__area-in-button" data-i18n="area.button" data-i18n-href="whatsappApplyAreaLink">
                         Оформить гарантию
                     </a>
                 </div>
 
                 <div class="main__area-in-right">
                     <img src="static/images/KZmap.png" class="main__area-in-img">
-                    <div class="main__area-in-img-text">
+                    <div class="main__area-in-img-text" data-i18n="area.mapText">
                         Carso.kz работает <br> по вcему Казахстану
                     </div>
                 </div>
@@ -667,11 +709,11 @@
 
         <section class="main__cities" id="avtoservices">
             <div class="main__cities-in">
-                <div class="main__cities-in-title">
+                <div class="main__cities-in-title" data-i18n="services.title">
                     Наши автосервисы
                 </div>
 
-                <div class="main__cities-in-desc">
+                <div class="main__cities-in-desc" data-i18n="services.description">
                     *Примечание: перед очередной заменой жидкостей заранее записывайтесь и уведомляйте Carso.kz по
                     контакту <span class="main__cities-in-desc-phone">
                         8&nbsp;(708)&nbsp;240-72-28
@@ -687,10 +729,13 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Автосервисы</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.service">
+                                    Автосервисы
+                                </div>
                                 <p>Жандосова, 94а/1</p>
                                 <p>Хмельницкого, 66</p>
-                                <i style="font-weight: 500;">(Для гибридных и электро-мобилей) ➜</i>
+                                <i style="font-weight: 500;" data-i18n="cities.hybrid">(Для гибридных и электро-мобилей)
+                                    ➜</i>
                                 <p>
                                     Какимбека Салыкова, 10
                                 </p>
@@ -708,7 +753,8 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Автосервисы</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.service">Автосервисы
+                                </div>
                                 <p> <a target="_blank"
                                         href="https://2gis.kz/astana/search/%D0%A1%D0%B0%D1%80%D1%8B%D0%BD%2C%2063%2F2/firm/70000001040531752/71.521808%2C51.134917?m=71.443112%2C51.129753%2F10.72">
                                         Сарын, 63/2</a>
@@ -719,7 +765,8 @@
                             </div>
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p> <a target="_blank"
                                         href="https://2gis.kz/astana/search/%D0%9A%D0%B5%D0%BD%D0%B5%D1%81%D0%B0%D1%80%D1%8B%2C%2085%2F2/firm/70000001037520895?m=71.459013%2C51.16438%2F20">
                                         Кенесары, 85/2</a></p>
@@ -741,7 +788,8 @@
                         <div class="main__cities-in-item-content">
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p>24-й микрорайон, 7/2</p>
                             </div>
                         </div>
@@ -756,7 +804,8 @@
                         <div class="main__cities-in-item-content">
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
 
                                 <p><a href="" target="_blank">
                                         Санкибай батыра, 16В
@@ -774,7 +823,8 @@
                         <div class="main__cities-in-item-content">
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p><a target="_blank" href="https://go.2gis.com/68h5m">​пр. Улы Жибек Жолы,
                                         205/2</a></p>
                             </div>
@@ -790,7 +840,8 @@
                         <div class="main__cities-in-item-content">
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p><a target="_blank" href="https://2gis.kz/atyrau/firm/70000001075867807">​Трасса
                                         Атырау-Доссор, 15</a></p>
                             </div>
@@ -872,7 +923,8 @@
                         <div class="main__cities-in-item-content">
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p><a href="https://2gis.kz/karaganda/firm/70000001046612665"
                                         target="_blank">Космонавтов, 1а</a></p>
                             </div>
@@ -924,7 +976,8 @@
                         <div class="main__cities-in-item-content">
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p><a href="https://2gis.kz/kokshetau/firm/70000001033561266" target="_blank">мкр.
                                         Сункар, Бегельдинова, 84а</a></p>
                             </div>
@@ -940,7 +993,8 @@
                         <div class="main__cities-in-item-content">
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p><a target="_blank" href="https://www.instagram.com/mk_oil.service/">Манаса, 33</a>
                                 </p>
                             </div>
@@ -955,7 +1009,8 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Автосервисы</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.service">Автосервисы
+                                </div>
                                 <p><a target="_blank" href="https://2gis.kz/kostanay/firm/70000001051432850">Киевская,
                                         15</a></p>
                             </div>
@@ -971,7 +1026,8 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p> <a target="_blank" href="https://go.2gis.com/v0uUm">
                                         Назира Торекулова, 1в</a></p>
                             </div>
@@ -987,7 +1043,8 @@
                         <div class="main__cities-in-item-content">
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p><a target="_blank"
                                         href="https://2gis.kz/pavlodar/search/%D0%9F%D1%80.%20%D0%9D%D1%83%D1%80%D1%81%D1%83%D0%BB%D1%82%D0%B0%D0%BD%D0%B0%20%D0%9D%D0%B0%D0%B7%D0%B0%D1%80%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%2C%2056%2F1/firm/70000001040839480/76.968848%2C52.26666?m=76.968804%2C52.266645%2F17.31">Пр.
                                         Нурсултана Назарбаева, 56/1</a></p>
@@ -1003,7 +1060,8 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Автосервисы</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.service">Автосервисы
+                                </div>
                                 <p>Жумабаева, 34 </p>
                             </div>
 
@@ -1030,7 +1088,8 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p> <a target="_blank"
                                         href="https://2gis.kz/semej/search/%D0%BA%D0%B0%D1%80%D0%B6%D0%B0%D1%83%D0%B1%D0%B0%D0%B9%D1%83%D0%BB%D1%8B%20241/firm/70000001091625764/80.263548%2C50.443289?m=80.264375%2C50.443204%2F18.38%2Fr%2F-7.95">
                                         Каржаубайулы, 241</a></p>
@@ -1048,7 +1107,8 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p> <a target="_blank"
                                         href="https://2gis.kz/kokshetau/search/5%20%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C%2065%2F1/geo/70030076341965166/71.891948%2C52.361107?m=71.891992%2C52.360896%2F19.58">
                                         5 микрорайон, 65/1</a></p>
@@ -1075,7 +1135,8 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Автосервисы</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.service">Автосервисы
+                                </div>
                                 <p> <a target="_blank"
                                         href="https://2gis.kz/almaty/firm/70000001087884042?m=78.36719%2C45.013681%2F13.61">Каблиса
                                         Жырау, 176</a></p>
@@ -1092,7 +1153,8 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Автосервисы</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.service">Автосервисы
+                                </div>
                                 <p>Сулейманова, 72</p>
                             </div>
                         </div>
@@ -1107,7 +1169,8 @@
                         <div class="main__cities-in-item-content">
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p><a target="_blank" href="https://go.2gis.com/N0leu">Кызылординская трасса, 42</a>
                                 </p>
                             </div>
@@ -1122,14 +1185,16 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Автосервисы</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.service">Автосервисы
+                                </div>
                                 <p> <a target="_blank"
                                         href="https://2gis.kz/uralsk/search/%D0%A1%D0%B0%D1%80%D1%8B%D0%BC%D0%B0%20%D0%94%D0%B0%D1%82%D0%BE%D0%B2%D0%B0%2C%2051%2F3/firm/70000001047597880/51.415475%2C51.257496?m=51.415302%2C51.257391%2F19.45">
                                         Сарыма Датова, 51/3а </a> </p>
                             </div>
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p><a target="_blank"
                                         href="https://2gis.kz/uralsk/search/%D0%A1%D0%B0%D1%80%D1%8B%D0%BC%D0%B0%20%D0%94%D0%B0%D1%82%D0%BE%D0%B2%D0%B0%2C%2051%2F3/firm/70000001047597880/51.415475%2C51.257496?m=51.415302%2C51.257391%2F19.45">
                                         Сарыма Датова, 51/3а </a></p>
@@ -1145,7 +1210,8 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p><a target="_blank" href="https://go.2gis.com/Vs0F6">
                                         пр. Назарбаева, 196 </a></p>
                             </div>
@@ -1172,13 +1238,15 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Автосервисы</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.service">Автосервисы
+                                </div>
                                 <p> <a target="_blank" href="https://go.2gis.com/tV9Mf">
                                         Тамерлановское шоссе, 40/2</a></p>
                             </div>
 
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title">Замена масла</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
+                                </div>
                                 <p> Мадели Кожа, 67 </p>
                                 <p> <a target="_blank" href="https://go.2gis.com/3pD0R">
                                         Рыскулова, 23</a></p>
@@ -1198,10 +1266,10 @@
                     </div>
                 </div>
 
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AХочу%20записаться%20на%20технический%20осмотр
-            " class="main__cities-in-button">
-                    Записаться на технический осмотр
-                </a>
+                <a target="_blank"
+                    href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AХочу%20записаться%20на%20технический%20осмотр"
+                    class="main__cities-in-button" data-i18n="services.button"
+                    data-i18n-href="whatsappTechLink">Записаться на технический осмотр</a>
             </div>
         </section>
 
@@ -1222,15 +1290,15 @@
 
         <section class="main__comments" id="comments">
             <div class="main__comments-in">
-                <div class="main__comments-in-title">Отзывы наших клиентов</div>
+                <div class="main__comments-in-title" data-i18n="reviews.title">Отзывы наших клиентов</div>
 
                 <div class="swiper main__comments-in-posts">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide main__comments-in-posts-item">
-                            <div class="main__comments-in-posts-item-title">
+                            <div class="main__comments-in-posts-item-title" data-i18n="reviews.cases.0.title">
                                 Замена двигателя и турбин Volvo XC90
                             </div>
-                            <div class="main__comments-in-posts-item-text">
+                            <div class="main__comments-in-posts-item-text" data-i18n="reviews.cases.0.text">
                                 При покупке Volvo XC90 в автосалоне Crystal Motors клиентка оформила техническую
                                 гарантию Carso.kz.
                                 Вскоре автомобиль потребовал серьезного ремонта – замены двигателя и впоследствии двух
@@ -1249,7 +1317,8 @@
                             <div class="main__comments-in-posts-item-graphs">
                                 <div class="main__comments-in-posts-item-graphs-element">
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.0.repairSelf">
                                             Стоимость ремонта <br> самостоятельно
                                         </div>
 
@@ -1262,7 +1331,8 @@
                                     </div>
 
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.0.repairCompany">
                                             Выплата Carso.kz по <br>тарифу нашей компании
                                         </div>
 
@@ -1278,10 +1348,10 @@
                         </div>
 
                         <div class="swiper-slide main__comments-in-posts-item">
-                            <div class="main__comments-in-posts-item-title">
+                            <div class="main__comments-in-posts-item-title" data-i18n="reviews.cases.1.title">
                                 Ремонт вариатора Nissan X Trail
                             </div>
-                            <div class="main__comments-in-posts-item-text">
+                            <div class="main__comments-in-posts-item-text" data-i18n="reviews.cases.1.text">
                                 Приобретая Nissan X Trail для семейных путешествий, Алишер решил защитить свой бюджет и
                                 оформил
                                 техническую гарантию Carso.kz. Это решение оказалось дальновидным – вскоре возникли
@@ -1300,7 +1370,8 @@
                             <div class="main__comments-in-posts-item-graphs">
                                 <div class="main__comments-in-posts-item-graphs-element">
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.1.repairSelf">
                                             Стоимость ремонта <br> самостоятельно
                                         </div>
 
@@ -1313,7 +1384,8 @@
                                     </div>
 
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.1.repairCompany">
                                             Выплата Carso.kz по <br>тарифу нашей компании
                                         </div>
 
@@ -1329,10 +1401,10 @@
                         </div>
 
                         <div class="swiper-slide main__comments-in-posts-item">
-                            <div class="main__comments-in-posts-item-title">
+                            <div class="main__comments-in-posts-item-title" data-i18n="reviews.cases.2.title">
                                 Ремонт двигателя Kia Opirus
                             </div>
-                            <div class="main__comments-in-posts-item-text">
+                            <div class="main__comments-in-posts-item-text" data-i18n="reviews.cases.2.text">
                                 После приобретения Kia Opirus Карим предусмотрительно оформил техническую гарантию
                                 Carso.kz. Его предусмотрительность оправдалась – уже через несколько дней двигатель
                                 потребовал капитального ремонта. Несмотря на существующие ограничения гарантийного
@@ -1349,7 +1421,8 @@
                             <div class="main__comments-in-posts-item-graphs">
                                 <div class="main__comments-in-posts-item-graphs-element">
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.2.repairSelf">
                                             Стоимость ремонта <br> самостоятельно
                                         </div>
 
@@ -1362,7 +1435,8 @@
                                     </div>
 
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.2.repairCompany">
                                             Выплата Carso.kz по <br>тарифу нашей компании
                                         </div>
 
@@ -1378,10 +1452,10 @@
                         </div>
 
                         <div class="swiper-slide main__comments-in-posts-item">
-                            <div class="main__comments-in-posts-item-title">
+                            <div class="main__comments-in-posts-item-title" data-i18n="reviews.cases.3.title">
                                 Замена автоматической коробки передач Nissan X Trail
                             </div>
-                            <div class="main__comments-in-posts-item-text">
+                            <div class="main__comments-in-posts-item-text" data-i18n="reviews.cases.3.text">
                                 При покупке Nissan X Trail владелец включил в пакет техническую гарантию Carso.kz. Это
                                 решение оказалось своевременным – спустя месяц он обнаружил повышенный расход топлива и
                                 обратился в наш центр поддержки. Специалисты направили клиента на комплексную
@@ -1399,7 +1473,8 @@
                             <div class="main__comments-in-posts-item-graphs">
                                 <div class="main__comments-in-posts-item-graphs-element">
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.3.repairSelf">
                                             Стоимость ремонта <br> самостоятельно
                                         </div>
 
@@ -1412,7 +1487,8 @@
                                     </div>
 
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.3.repairCompany">
                                             Выплата Carso.kz. по <br>тарифу нашей компании
                                         </div>
 
@@ -1428,10 +1504,10 @@
                         </div>
 
                         <div class="swiper-slide main__comments-in-posts-item">
-                            <div class="main__comments-in-posts-item-title">
+                            <div class="main__comments-in-posts-item-title" data-i18n="reviews.cases.4.title">
                                 Ремонт двигателя и стартера Hyundai Accent
                             </div>
-                            <div class="main__comments-in-posts-item-text">
+                            <div class="main__comments-in-posts-item-text" data-i18n="reviews.cases.4.text">
                                 Амир приобрел Hyundai Accent с пробегом в Кокшетау, зная о наличии технической гарантии
                                 Carso.kz. Спустя месяц эксплуатации потребовался ремонт стартера и двигателя, но
                                 финансовых
@@ -1451,7 +1527,8 @@
                             <div class="main__comments-in-posts-item-graphs">
                                 <div class="main__comments-in-posts-item-graphs-element">
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.4.repairSelf">
                                             Стоимость ремонта <br> самостоятельно
                                         </div>
 
@@ -1464,7 +1541,8 @@
                                     </div>
 
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.4.repairCompany">
                                             Выплата Carso.kz по <br>тарифу нашей компании
                                         </div>
 
@@ -1480,10 +1558,10 @@
                         </div>
 
                         <div class="swiper-slide main__comments-in-posts-item">
-                            <div class="main__comments-in-posts-item-title">
+                            <div class="main__comments-in-posts-item-title" data-i18n="reviews.cases.5.title">
                                 Ремонт генератора и замена ГБЦ Hyundai Santa Fe
                             </div>
-                            <div class="main__comments-in-posts-item-text">
+                            <div class="main__comments-in-posts-item-text" data-i18n="reviews.cases.5.text">
                                 При покупке подержанного Hyundai Santa Fe Максиму предоставили бесплатную гарантию
                                 Carso.kz. Предложение оказалось ценным – через два месяца потребовалась замена головки
                                 блока цилиндров, а позднее и ремонт генератора. Наши специалисты внимательно изучили
@@ -1501,7 +1579,8 @@
                             <div class="main__comments-in-posts-item-graphs">
                                 <div class="main__comments-in-posts-item-graphs-element">
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.5.repairSelf">
                                             Стоимость ремонта <br> самостоятельно
                                         </div>
 
@@ -1514,7 +1593,8 @@
                                     </div>
 
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.5.repairCompany">
                                             Выплата Carso.kz по <br>тарифу нашей компании
                                         </div>
 
@@ -1530,11 +1610,11 @@
                         </div>
 
                         <div class="swiper-slide main__comments-in-posts-item">
-                            <div class="main__comments-in-posts-item-title">
+                            <div class="main__comments-in-posts-item-title" data-i18n="reviews.cases.6.title">
                                 Ремонт двигателя BMW X1
                             </div>
                             <div class="main__comments-in-posts-item-text">
-                                <div class="Section__client-text">
+                                <div class="Section__client-text" data-i18n="reviews.cases.6.text">
                                     Приобретая BMW X1 в автосалоне, Гульнара дополнительно оформила гарантию Carso.kz
                                     для
                                     защиты от непредвиденных поломок. Интуиция не подвела – через месяц в двигателе
@@ -1555,7 +1635,8 @@
                             <div class="main__comments-in-posts-item-graphs">
                                 <div class="main__comments-in-posts-item-graphs-element">
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.6.repairSelf">
                                             Стоимость ремонта <br> самостоятельно
                                         </div>
 
@@ -1568,7 +1649,8 @@
                                     </div>
 
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title "
+                                            data-i18n="reviews.cases.6.repairCompany">
                                             Выплата Carso.kz по <br>тарифу нашей компании
                                         </div>
 
@@ -1585,11 +1667,11 @@
 
 
                         <div class="swiper-slide main__comments-in-posts-item">
-                            <div class="main__comments-in-posts-item-title">
+                            <div class="main__comments-in-posts-item-title" data-i18n="reviews.cases.7.title">
                                 Замена двигателя Hyundai Santa Fe
                             </div>
                             <div class="main__comments-in-posts-item-text">
-                                <div class="Section__client-text">
+                                <div class="Section__client-text" data-i18n="reviews.cases.7.text">
                                     Темирлан осуществил давнюю мечту, приобретя Hyundai Santa Fe, но спустя несколько
                                     месяцев эксплуатации обнаружил неисправность двигателя. К счастью, автомобиль был
                                     защищен гарантией Carso.kz. После обращения наша техническая служба организовала
@@ -1609,7 +1691,8 @@
                             <div class="main__comments-in-posts-item-graphs">
                                 <div class="main__comments-in-posts-item-graphs-element">
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.7.repairSelf"> >
                                             Стоимость ремонта <br> самостоятельно
                                         </div>
 
@@ -1622,7 +1705,8 @@
                                     </div>
 
                                     <div class="main__comments-in-posts-item-graphs-element-wrap">
-                                        <div class="main__comments-in-posts-item-graphs-element-title">
+                                        <div class="main__comments-in-posts-item-graphs-element-title"
+                                            data-i18n="reviews.cases.7.repairCompany">
                                             Выплата Carso.kz по <br>тарифу нашей компании
                                         </div>
 
@@ -1653,16 +1737,15 @@
                     <img src="static/images/expert.png" alt="Эксперт" class="main__help-img">
                 </div>
                 <div class="main__help-content">
-                    <h2 class="main__help-title">Нужна помощь?</h2>
-                    <p class="main__help-description">
+                    <h2 class="main__help-title" data-i18n="help.title">Нужна помощь?</h2>
+                    <p class="main__help-description" data-i18n="help.description">
                         Свяжитесь с нашим специалистом и получите профессиональную консультацию по всем вопросам,
                         связанными с гарантией.
                     </p>
                     <a target="_blank"
                         href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AУ%20меня%20есть%20вопросы"
-                        class="main__help-button">
-                        Написать в WhatsApp
-                    </a>
+                        class="main__help-button" data-i18n="help.button" data-i18n-href="whatsappHelpLink">Написать в
+                        WhatsApp</a>
                 </div>
             </div>
         </section>
@@ -1683,11 +1766,12 @@
                                             d="M12 2v20M17 7l-5-5-5 5M5 16H3a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2h-2" />
                                     </svg>
                                 </div>
-                                <h3 class="main__apply-block-title">Оформить гарантию</h3>
+                                <h3 class="main__apply-block-title" data-i18n="apply.warranty.title">Оформить гарантию
+                                </h3>
                             </div>
                             <div class="main__apply-block-actions">
                                 <a href="https://api.whatsapp.com/send?phone=77082407229&text=Здравствуйте%0AХочу%20оформить%20гарантию"
-                                    target="_blank" class="main__apply-button main__apply-button-primary">
+                                    target="_blank" class="main__apply-button main__apply-button-primary" data-i18n-href="whatsappWarrantyLink">
                                     <span class="button-icon">
                                         <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                                             <path
@@ -1701,7 +1785,6 @@
                         </div>
                     </div>
 
-                    <!-- Блок с контактами поддержки -->
                     <div class="main__apply-block">
                         <div class="main__apply-block-content">
                             <div class="main__apply-block-info">
@@ -1711,7 +1794,7 @@
                                             d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
                                     </svg>
                                 </div>
-                                <h3 class="main__apply-block-title">Поддержка</h3>
+                                <h3 class="main__apply-block-title" data-i18n="apply.support.title">Поддержка</h3>
                             </div>
                             <div class="main__apply-contacts">
                                 <div class="main__apply-contact-row">
@@ -1759,7 +1842,7 @@
             <section class="main__team" id="team">
                 <div class="main__team-container">
                     <div class="main__team-header">
-                        <h2 class="main__team-title">Наша команда</h2>
+                        <h2 class="main__team-title" data-i18n="team.title">Наша команда</h2>
                     </div>
 
                     <div class="main__team-slider swiper-container">
@@ -1769,8 +1852,10 @@
                                     <img src="static/images/team/Алимгазы Елдар - Финансовый Директор.png">
                                 </div>
                                 <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name">Алимгазы Елдар</h3>
-                                    <p class="main__team-card-position">Финансовый Директор</p>
+                                    <h3 class="main__team-card-name" data-i18n="team.members.eldare.name">Алимгазы Елдар
+                                    </h3>
+                                    <p class="main__team-card-position" data-i18n="team.members.eldare.position">
+                                        Финансовый Директор</p>
                                 </div>
                             </div>
                             <div class="swiper-slide main__team-card">
@@ -1778,8 +1863,10 @@
                                     <img src="static/images/team/Тлеукабыл Данияр - Генеральный Директор.png">
                                 </div>
                                 <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name">Тлеукабыл Данияр</h3>
-                                    <p class="main__team-card-position">Генеральный Директор</p>
+                                    <h3 class="main__team-card-name" data-i18n="team.members.daniyar.name">Тлеукабыл
+                                        Данияр</h3>
+                                    <p class="main__team-card-position" data-i18n="team.members.daniyar.position">
+                                        Генеральный Директор</p>
                                 </div>
                             </div>
                             <div class="swiper-slide main__team-card">
@@ -1788,8 +1875,10 @@
                                         src="static/images/team/Тургали Санжар - Региональный менеджер по продажам.png">
                                 </div>
                                 <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name">Тургали Санжар</h3>
-                                    <p class="main__team-card-position">Региональный менеджер по продажам</p>
+                                    <h3 class="main__team-card-name" data-i18n="team.members.sanzhar.name">Тургали
+                                        Санжар</h3>
+                                    <p class="main__team-card-position" data-i18n="team.members.sanzhar.position">
+                                        Региональный менеджер по продажам</p>
                                 </div>
                             </div>
 
@@ -1799,8 +1888,10 @@
                                         src="static/images/team/Аренов Абу-Али - Руководитель отдела сервисного обслуживания.png">
                                 </div>
                                 <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name">Аренов Абу-Али</h3>
-                                    <p class="main__team-card-position">Руководитель отдела сервисного обслуживания</p>
+                                    <h3 class="main__team-card-name" data-i18n="team.members.abuali.name">Аренов Абу-Али
+                                    </h3>
+                                    <p class="main__team-card-position" data-i18n="team.members.abuali.position">
+                                        Руководитель отдела сервисного обслуживания</p>
                                 </div>
                             </div>
 
@@ -1809,8 +1900,10 @@
                                     <img src="static/images/team/Боранов Ермек - Начальник службы безопасности.png">
                                 </div>
                                 <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name">Боранов Ермек</h3>
-                                    <p class="main__team-card-position">Начальник службы безопасности</p>
+                                    <h3 class="main__team-card-name" data-i18n="team.members.ermek.name">Боранов Ермек
+                                    </h3>
+                                    <p class="main__team-card-position" data-i18n="team.members.ermek.position">
+                                        Начальник службы безопасности</p>
                                 </div>
                             </div>
 
@@ -1821,8 +1914,10 @@
                                         src="static/images/team/Бейсембеков Алишер - Исполнительный директор & IT директор.png">
                                 </div>
                                 <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name">Бейсембеков Алишер</h3>
-                                    <p class="main__team-card-position">Исполнительный директор & IT директор</p>
+                                    <h3 class="main__team-card-name" data-i18n="team.members.alisher.name">Бейсембеков
+                                        Алишер</h3>
+                                    <p class="main__team-card-position" data-i18n="team.members.alisher.position">
+                                        Исполнительный директор & IT директор</p>
                                 </div>
                             </div>
 
@@ -1831,8 +1926,10 @@
                                     <img src="static/images/team/Махмутов Тлеухан - Технический директор.png">
                                 </div>
                                 <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name">Махмутов Тлеухан</h3>
-                                    <p class="main__team-card-position">Технический директор</p>
+                                    <h3 class="main__team-card-name" data-i18n="team.members.tleukhan.name">Махмутов
+                                        Тлеухан</h3>
+                                    <p class="main__team-card-position" data-i18n="team.members.tleukhan.position">
+                                        Технический директор</p>
                                 </div>
                             </div>
                         </div>
@@ -1845,12 +1942,14 @@
             </section>
 
             <div class="footer__in-partners" id="partners">
-                <div class="footer__in-partners-title">
+                <div class="footer__in-partners-title" data-i18n="partners.title">
                     Наши Партнёры
                 </div>
 
                 <div class="footer__in-partners-desc">
-                    Автосалоны, где вы можете приобрести автомобили с гарантией <b>Carso.kz</b>:
+                    <div data-i18n="partners.description">
+                        Автосалоны, где вы можете приобрести автомобили с гарантией <b>Carso.kz</b>:
+                    </div>
                     <ul class="footer__in-partners-desc-ul">
                         <li>Avtomarket</li>
                         <li>Q4 Tulpar</li>
@@ -1928,15 +2027,18 @@
                     <img src="static/images/carsoLogo.png" class="footer__in-logo">
 
                     <div class="footer__in-privacy">
-                        ТОО&nbsp;"CARSO&nbsp;GROUP".&nbsp;Все&nbsp;права&nbsp;защищены. <br>
-                        Адрес: Казахстан,&nbsp;Астана,&nbsp;Сыганак,​&nbsp;60/2.<br>
-                        БИН (ИИН):&nbsp;250240009125. <br>
-                        Банк:&nbsp;АО&nbsp;"Kaspi&nbsp;Bank". <br>
-                        БИК:&nbsp;CASPKZKA. <br>
-                        Номер&nbsp;счёта:&nbsp;KZ73722S000043641156F.
+
+                        <div data-i18n="footer.companyInfo">
+                            ТОО&nbsp;"CARSO&nbsp;GROUP".&nbsp;Все&nbsp;права&nbsp;защищены. <br></div>
+                        <div data-i18n="footer.address"> Адрес: Казахстан,&nbsp;Астана,&nbsp;Сыганак,​&nbsp;60/2.<br>
+                        </div>
+                        <div data-i18n="footer.bin">БИН (ИИН):&nbsp;250240009125. <br></div>
+                        <div data-i18n="footer.bank">Банк:&nbsp;АО&nbsp;"Kaspi&nbsp;Bank". <br></div>
+                        <div data-i18n="footer.bic">БИК:&nbsp;CASPKZKA. <br></div>
+                        <div data-i18n="footer.account">Номер&nbsp;счёта:&nbsp;KZ73722S000043641156F.</div>
                     </div>
 
-                    <a class="footer__in-2gis" target="_blank"
+                    <a data-i18n="footer.2gis" class="footer__in-2gis" target="_blank"
                         href="https://2gis.kz/astana/search/carso/firm/70000001099767943/71.429546%2C51.122255?m=71.429546%2C51.122255%2F14">
                         Мы в 2Gis
                     </a>
@@ -1967,7 +2069,7 @@
         </div>
 
     </footer>
-
+    <script src="static/scripts/lang-switcher.js"></script>
     <script src="static/scripts/script.js"></script>
 </body>
 
