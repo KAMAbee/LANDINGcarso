@@ -43,19 +43,16 @@ const applyTranslations = (translations) => {
 const setLanguage = async (lang) => {
   localStorage.setItem("lang", lang);
   currentLang = lang;
+  
+  const langContainer = document.querySelector(".header__top-lang");
+  if (lang === "kz") {
+    langContainer.classList.add("kz-active");
+  } else {
+    langContainer.classList.remove("kz-active");
+  }
 
   langBtns.forEach((btn) => {
-    const isActive = btn.getAttribute("data-lang") === lang;
-
-    // Анимация переключения
-    if (isActive && !btn.classList.contains("active")) {
-      btn.classList.add("animating");
-      setTimeout(() => {
-        btn.classList.remove("animating");
-      }, 300);
-    }
-
-    btn.classList.toggle("active", isActive);
+    btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
   });
 
   const translations = await loadTranslations(lang);
