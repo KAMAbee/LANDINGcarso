@@ -46,6 +46,15 @@ const setLanguage = async (lang) => {
 
   langBtns.forEach((btn) => {
     const isActive = btn.getAttribute("data-lang") === lang;
+
+    // Анимация переключения
+    if (isActive && !btn.classList.contains("active")) {
+      btn.classList.add("animating");
+      setTimeout(() => {
+        btn.classList.remove("animating");
+      }, 300);
+    }
+
     btn.classList.toggle("active", isActive);
   });
 
