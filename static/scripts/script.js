@@ -112,7 +112,6 @@ document.addEventListener("click", (event) => {
         { once: true }
       );
     } else {
-      // Если нет открытого или кликаем по тому же самому - просто переключаем
       if (isVisible) {
         content.style.maxHeight = "0";
         item.classList.remove("active");
@@ -122,7 +121,6 @@ document.addEventListener("click", (event) => {
       }
     }
   } else if (!isContent) {
-    // Закрываем всё, если клик вне списка и контента
     allItems.forEach((i) => {
       const content = i.querySelector(".main__cities-in-item-content");
       content.style.maxHeight = "0";
@@ -368,12 +366,10 @@ document.addEventListener("DOMContentLoaded", function () {
       videoModalVideo.src = "";
       videoModal.classList.remove("active");
 
-      // Restart swiper autoplay
       if (swiperInstance) {
         swiperInstance.autoplay.start();
       }
 
-      // Unlock body scroll
       document.body.style.overflow = "";
     }
   }
@@ -450,7 +446,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Intersection Observer for animation
   const teamCards = document.querySelectorAll(".main__team-card");
   const observer = new IntersectionObserver(
     (entries) => {
@@ -467,6 +462,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   teamCards.forEach((card) => observer.observe(card));
 });
-
-
-
