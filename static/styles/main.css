@@ -1840,13 +1840,13 @@ html {
           background: #F1D545;
           color: #222222; }
   @media (max-width: 1110px) {
-    .main .main__cities-in-desc {
+    .main .main__cities-in-description {
       width: auto; } }
   @media (max-width: 728px) {
     .main .main__cities-in-title {
       font-size: 24px;
       text-align: center; }
-    .main .main__cities-in-desc {
+    .main .main__cities-in-description {
       text-align: center; }
     .main .main__cities-in {
       display: flex;
