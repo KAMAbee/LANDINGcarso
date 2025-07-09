@@ -1746,14 +1746,14 @@ html {
       .main__cities-in-desc {
         font-weight: 500;
         font-size: 18px;
-        color: #db1b1b;
+        color: #000000;
         margin-top: 20px;
         line-height: 26px;
         width: 1000px; }
         .main__cities-in-desc-phone {
           font-weight: 700;
           font-size: 20px;
-          color: #f93131;
+          color: #000000;
           white-space: nowrap; }
       .main__cities-in-items {
         margin-top: 40px;
