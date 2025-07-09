@@ -1743,14 +1743,14 @@ html {
         font-size: 32px;
         color: #000;
         text-align: left; }
-      .main__cities-in-desc {
+      .main__cities-in-description {
         font-weight: 500;
         font-size: 18px;
         color: #000000;
         margin-top: 20px;
         line-height: 26px;
         width: 1000px; }
-        .main__cities-in-desc-phone {
+        .main__cities-in-description-phone {
           font-weight: 700;
           font-size: 20px;
           color: #000000;
