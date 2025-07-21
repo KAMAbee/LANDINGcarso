@@ -159,6 +159,16 @@
     "description": "*Ескерту: сұйықтықтарды келесі ауыстыру алдында алдын ала жазылып, Carso.kz-ге 8&nbsp;(708)&nbsp;240-72-28 байланыс нөмірі арқылы хабарлаңыз",
     "button": "Техникалық тексеруге жазылу"
   },
+  "servicePartners": {
+    "title": "Біздің серіктестеріміз үшін",
+    "subtitle": "Carso.kz бухгалтерлік жүйесіне кіріп, ыңғайлы форматта клиенттеріңізді бақылаңыз",
+    "benefits": {
+      "reporting": "Ыңғайлы келісім және есеп беру жүйесі",
+      "easy": "Жылдам және анық",
+      "allInOne": "Барлығы бір жерде!"
+    },
+    "button": "Білу"
+  },
   "reviews": {
     "title": "Клиенттеріміздің пікірлері",
     "cases": [
@@ -316,7 +326,6 @@
   "whatsappApplyNewLink": "https://api.whatsapp.com/send?phone=77082407229&text=Сәлеметсіз%20бе%0AЖаңа%20көлігіме%20кепілдік%20ресімдегім%20келеді",
   "whatsappTechLink": "https://api.whatsapp.com/send?phone=77082407229&text=Сәлеметсіз%20бе%0AТехникалық%20тексеруден%20өткім%20келеді",
   "whatsappHelpLink": "https://api.whatsapp.com/send?phone=77082407229&text=Сәлеметсіз%20бе%0AМенің%20сұрақтарым%20бар",
-"whatsappApplyAreaLink": "https://api.whatsapp.com/send?phone=77082407229&text=Сәлеметсіз%20бе%0AКепілдік%20ресімдегім%20келеді",
+  "whatsappApplyAreaLink": "https://api.whatsapp.com/send?phone=77082407229&text=Сәлеметсіз%20бе%0AКепілдік%20ресімдегім%20келеді",
   "whatsappWarrantyLink": "https://api.whatsapp.com/send?phone=77082407229&text=Сәлеметсіз%20бе%0AКепілдік%20ресімдегім%20келеді"
-
 }

@@ -2958,7 +2958,7 @@ html {
                 font-size: 16px;
                 font-weight: 700;
                 border: none;
-                width: 60%;
+                width: 400px;
                 height: 55px;
                 border-radius: 12px;
                 display: flex;
@@ -3799,9 +3799,129 @@ html {
         }
     }
 
+
+    &__service-partners {
+        background-color: #f0f9ff;
+        padding: 70px 0;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &-container {
+            width: calc(100% - 40px);
+            max-width: 1180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        &-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        &-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        &-subtitle {
+            font-size: 18px;
+            color: #444;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        &-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        &-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+
+
+        &-list {
+            padding-left: 25px;
+        }
+
+        &-list li {
+            font-size: 18px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 5px;
+        }
+
+        &-list li::before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background-color: #4093ff;
+            border-radius: 50%;
+        }
+
+
+        &-button {
+            width: 300px;
+            padding: 14px 30px;
+            background-color: #549eff;
+            color: #000;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+            margin-top: 30px;
+
+            &:hover {
+                background-color: #4387df;
+            }
+
+            &:active {
+                background-color: #0d76ff;
+            }
+        }
+
+
+        @media (max-width: 992px) {
+
+            &-button {
+                align-self: center;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main__service-partners-info {
+                text-align: center;
+            }
+
+            .main__service-partners-list {
+                display: inline-block;
+                text-align: left;
+            }
+        }
+    }
+
     &__team {
         width: 100%;
-        padding: 0 0 100px 0;
+        padding: 100px 0 100px 0;
 
         &-container {
             width: calc(100% - 40px);
