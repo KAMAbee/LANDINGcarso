@@ -648,32 +648,120 @@
             </div>
         </section>
 
-        <section class="main__check" id="check">
-            <div class="main__check-in">
-                <div class="main__check-in-title" data-i18n="check.title">
-                    Проверьте историю своего авто по VIN и госномеру
+        <section class="main__check-vin" id="vin-check">
+            <div class="main__check-vin-container">
+                <div class="main__check-vin-header">
+                    <h2 class="main__check-vin-title">Проверка гарантии автомобиля Carso.kz</h2>
+                    <p class="main__check-vin-subtitle">Введите VIN код для получения информации о
+                        гарантии <b>Carso.kz</b></p>
                 </div>
 
-                <div class="main__check-in-wrap">
+                <div class="main__check-vin-content">
+                    <div class="main__check-vin-form-container">
+                        <form class="main__check-vin-form" id="vin-form">
+                            <div class="main__check-vin-input-group">
+                                <label for="vin-input">
+                                    VIN код автомобиля
+                                    <span class="main__check-vin-info">
+                                        (VIN состоит из 17 символов, может включать буквы и цифры)
+                                    </span>
+                                </label>
+                                <input type="text" id="vin-input" class="main__check-vin-input"
+                                    placeholder="Например: WBAJC51060G575351" maxlength="17">
+                                <span class="vin-error-message" id="vin-error"
+                                    style="color: red; display: none;"></span>
 
-                    <div class="main__check-in-text" data-i18n="check.description">
-                        Данные о периодах владения, регионы регистрации,
-                        тип владельца (физ. лицо или юр. лицо),
-                        список ГРНЗ этого авто.
-                        <br><br>
-                        Была ли машина в ДТП
-                        Узнать место и дату совершения ДТП,
-                        а также тип столкновения и количество жертв.
-                        <br><br>
-                        История имеющихся штрафов.
-                        Узнать количество, даты и суммы правонарушений.
+                            </div>
+
+                            <button type="submit" class="main__check-vin-submit">Проверить</button>
+                        </form>
                     </div>
 
-                    <a href="https://corsa.kz/" target="_blank" class="main__check-in-button"
-                        data-i18n="check.button">Узнать</a>
+                    <div class="main__check-vin-example">
+                        <h3 class="main__check-vin-example-title">Где найти VIN код?</h3>
+                        <div class="main__check-vin-example-text">
+                            <p>VIN-код (17 символов) можно найти:</p>
+                            <ul class="vin-locations-list">
+                                <li><strong>В документах:</strong> свидетельство о регистрации ТС (СТС), паспорт
+                                    транспортного средства (ПТС)</li>
+                                <li><strong>На автомобиле:</strong> под лобовым стеклом со стороны водителя, на стойке
+                                    водительской двери</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Результаты поиска (скрыты) -->
+                <div class="main__check-vin-results" id="vin-results" style="display: none;">
+                    <div class="main__check-vin-results-header">
+                        <h3 class="main__check-vin-results-title">Информация о гарантии</h3>
+                        <span class="main__check-vin-results-vin">VIN: <strong id="result-vin">-</strong></span>
+                    </div>
+
+                    <div class="main__check-vin-results-content">
+                        <div class="main__check-vin-results-car">
+                            <div class="main__check-vin-results-info">
+                                <div class="main__check-vin-results-model">
+                                    <span class="label">Модель:</span>
+                                    <span class="value" id="car-model">-</span>
+                                </div>
+                                <div class="main__check-vin-results-year">
+                                    <span class="label">Год выпуска:</span>
+                                    <span class="value" id="car-year">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main__check-vin-results-warranty">
+                            <div class="warranty-status active" id="warranty-status">
+                                <div class="warranty-icon">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                </div>
+                                <span>-</span>
+                            </div>
+
+                            <div class="main__check-vin-results-details">
+                                <div class="detail-item">
+                                    <span class="label">Начало гарантии:</span>
+                                    <span class="value" id="warranty-start">-</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Окончание гарантии:</span>
+                                    <span class="value" id="warranty-end">-</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Покрытие:</span>
+                                    <span class="value" id="warranty-coverage">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="swiper service-swiper">
+                        <div class="service-history-text">
+                            <h3>История сервисных записей</h3>
+                        </div>
+
+                        <div class="swiper-wrapper" id="service-slider">
+                            <!-- JavaScript вставит сюда .swiper-slide элементы -->
+                        </div>
+                        <div class="main__services-slider-controls">
+                            <div class="services-button-prev" id="vin-prev-slide">❮</div>
+                            <div class="services-button-next" id="vin-next-slide">❯</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
 
 
 
@@ -982,7 +1070,8 @@
 
                         <div class="main__cities-in-item-content">
                             <div class="main__cities-in-item-content-wrap">
-                                <div class="main__cities-in-item-content-title" data-i18n="cities.service">Автосервисы</div>
+                                <div class="main__cities-in-item-content-title" data-i18n="cities.service">Автосервисы
+                                </div>
                                 <p>Казыбек би, 291</p>
                             </div>
                         </div>
@@ -999,10 +1088,11 @@
                                 <div class="main__cities-in-item-content-title" data-i18n="cities.service">
                                     Автосервисы
                                 </div>
-                               
-                                <p><a href="https://2gis.kz/kokshetau/geo/70000001033499421/69.378002,53.274266" target="_blank">
-                                     Сагдиева, 96
-                                </a></p>
+
+                                <p><a href="https://2gis.kz/kokshetau/geo/70000001033499421/69.378002,53.274266"
+                                        target="_blank">
+                                        Сагдиева, 96
+                                    </a></p>
                             </div>
 
                             <div class="main__cities-in-item-content-wrap">
@@ -1014,7 +1104,7 @@
                                 <p><a href="https://go.2gis.com/0iUqL" target="_blank">
                                         Ашимова, 229
                                     </a></p>
-                                
+
                                 <p>Сагдиева, 91</p>
                             </div>
                         </div>

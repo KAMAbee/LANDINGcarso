@@ -2249,99 +2249,455 @@ html {
         }
     }
 
-    &__check {
-        width: 100%;
-        background-color: #FFF;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 70px 0;
 
-        &-in {
+
+    &__check-vin {
+        padding: 70px 0;
+        width: 100%;
+        background-color: #f8f9fc;
+
+        .main__check-vin-input.invalid {
+            border-color: red;
+            outline: none;
+        }
+
+        .vin-error-message {
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+
+        &-container {
             width: calc(100% - 40px);
             max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        &-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        &-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 15px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+
+        &-subtitle {
+            font-size: 16px;
+            color: #444;
+            max-width: 800px;
+            margin: 0 auto;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        &-content {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+
+            @media (max-width: 992px) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        &-form-container {
+            flex: 2;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+
+            @media (max-width: 768px) {
+                padding: 20px;
+            }
+        }
+
+        &-form {
             display: flex;
             flex-direction: column;
-            position: relative;
+            gap: 24px;
+        }
 
-            &-wrap {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 80px;
+        &-input-group {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 8px;
+                color: #222;
+            }
+        }
+
+        &-input {
+            height: 50px;
+            border: 2px solid #e1eaff;
+            border-radius: 8px;
+            padding: 0 16px;
+            font-size: 16px;
+            transition: all 0.3s;
+
+            &:focus {
+                border-color: #FFDE59;
+                box-shadow: 0 0 0 3px rgba(255, 222, 89, 0.2);
+                outline: none;
             }
 
+            &::placeholder {
+                color: #aaa;
+            }
+        }
+
+        &-info {
+            font-size: 13px;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        &-submit {
+            height: 50px;
+            background-color: #FFDE59;
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+
+            &:hover {
+                background-color: #FFE251;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 10px rgba(255, 222, 89, 0.3);
+            }
+
+            &:active {
+                transform: translateY(0);
+                background-color: #F1D545;
+            }
+        }
+
+        &-example {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+
             &-title {
-                font-weight: 700;
-                font-size: 32px;
-                color: #000;
-                text-align: left;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: #222;
             }
 
             &-text {
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 22px;
-                color: #000;
-                text-align: left;
-                margin-top: 20px;
+                color: #444;
+                font-size: 16px;
+                line-height: 1.5;
+
+                p {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .vin-locations-list {
+            padding-left: 20px;
+
+            li {
+                font-size: 14px;
+                margin-bottom: 8px;
+                color: #444;
             }
 
-            &-button {
-                text-decoration: none;
-                background: #FFDE59;
-                color: #000;
-                font-size: 18px;
+            @media (max-width: 992px) {
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-results {
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            margin-top: 40px;
+            transition: all 0.3s;
+            overflow: hidden;
+
+            &-header {
+                background-color: #fff9b6;
+                padding: 20px 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+            }
+
+            &-title {
+                font-size: 22px;
                 font-weight: 700;
-                border: none;
-                width: 240px;
-                height: 55px;
+                color: #000;
+                margin: 0;
+            }
+
+            &-vin {
+                font-size: 16px;
+                color: #555;
+
+                strong {
+                    font-weight: 600;
+                    color: #000;
+                }
+            }
+
+            &-content {
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                @media (max-width: 768px) {
+                    padding: 20px;
+                }
+            }
+
+            &-car {
+                display: flex;
+                gap: 30px;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                }
+            }
+
+            &-info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                justify-content: center;
+
+                .label {
+                    font-size: 16px;
+                    color: #666;
+                    display: inline-block;
+                    width: 130px;
+                }
+
+                .value {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #000;
+                }
+            }
+
+            &-warranty {
+                background-color: #f8f9fc;
                 border-radius: 12px;
+                padding: 24px;
+
+                .warranty-status {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                    font-weight: 600;
+
+                    &.active {
+                        color: #00a651;
+
+                        .warranty-icon {
+                            background-color: rgba(0, 166, 81, 0.1);
+                            color: #00a651;
+                        }
+                    }
+
+                    &.inactive {
+                        color: #e74c3c;
+
+                        .warranty-icon {
+                            background-color: rgba(231, 76, 60, 0.1);
+                            color: #e74c3c;
+                        }
+                    }
+
+                    .warranty-icon {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+
+            &-details {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+
+                @media (max-width: 576px) {
+                    grid-template-columns: 1fr;
+                }
+
+                .detail-item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+
+                    .label {
+                        font-size: 14px;
+                        color: #666;
+                    }
+
+                    .value {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #000;
+                    }
+                }
+            }
+
+            &-actions {
+                padding: 20px 30px;
+                border-top: 1px solid #eee;
+                display: flex;
+                gap: 16px;
+
+                @media (max-width: 576px) {
+                    flex-direction: column;
+                }
+            }
+
+            .service-history-text {
+                font-size: 20px;
+                margin-bottom: 20px;
+                color: #000000;
+                font-weight: 500;
+            }
+
+            .service-swiper {
+                margin: 30px 0;
+                padding: 0 30px;
+                position: relative;
+            }
+
+            .service-swiper .swiper-wrapper {
+                padding: 10px 0;
+            }
+
+            .service-card {
+                background-color: #fff;
+                border-radius: 12px;
+                padding: 20px;
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+                height: 100%;
+                transition: transform 0.3s;
+                border: 1px solid #eaeaea;
+            }
+
+            .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+                border-color: #FFDE59;
+            }
+
+            .service-card div {
+                margin-bottom: 8px;
+                line-height: 1.4;
+            }
+
+            .service-card .label {
+                color: #555;
+                font-weight: 600;
+                display: inline-block;
+                margin-right: 4px;
+            }
+
+            .service-card .value {
+                color: #000;
+                font-weight: 500;
+            }
+
+            .service-swiper .swiper-buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+                gap: 50px;
+            }
+
+            .service-swiper .swiper-button-prev,
+            .service-swiper .swiper-button-next {
+                cursor: pointer;
+                font-size: 20px;
+                padding: 10px 15px;
+                background: #eaecee;
+                color: #000;
+                border-radius: 12px;
+                user-select: none;
+                width: 50px;
+                height: 50px;
+                z-index: 400;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-top: 40px;
-                cursor: pointer;
                 transition: background 0.3s;
+                border: none;
+            }
 
-                &:hover {
-                    background: #FFE251;
-                    color: #222222;
+            .service-swiper .swiper-button-prev:hover,
+            .service-swiper .swiper-button-next:hover {
+                background: #FFE251;
+                color: #222222;
+            }
+
+            .service-swiper .swiper-button-prev:active,
+            .service-swiper .swiper-button-next:active {
+                background: #F1D545;
+                color: #222222;
+            }
+
+            /* Скрываем стандартные стрелки Swiper */
+            .service-swiper .swiper-button-prev::after,
+            .service-swiper .swiper-button-next::after {
+                display: none;
+            }
+
+            @media (max-width: 768px) {
+                .service-card {
+                    padding: 15px;
                 }
 
-                &:active {
-                    background: #F1D545;
-                    color: #222222;
+                .service-card div {
+                    margin-bottom: 6px;
+                    font-size: 14px;
                 }
             }
         }
-
     }
-
-    @media (max-width: 1110px) {
-
-        .main__check-in-wrap {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .main__check-in-button {
-            width: 300px;
-            font-size: 24px;
-            height: 60px;
-        }
-
-        .main__check-in-title {
-            font-size: 24px;
-            text-align: center;
-        }
-
-        .main__check-in-text {
-            text-align: center;
-        }
-    }
-
 
 
     &__area {
@@ -2935,7 +3291,7 @@ html {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    gap: 30px;
+                    gap: 50px;
                 }
 
                 .c-button-prev,
@@ -2999,9 +3355,6 @@ html {
                         }
                     }
 
-                    .swiper-controls {
-                        gap: 20px;
-                    }
 
                     .c-button-prev,
                     .c-button-next {

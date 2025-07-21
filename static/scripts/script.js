@@ -462,3 +462,179 @@ document.addEventListener("DOMContentLoaded", function () {
 
   teamCards.forEach((card) => observer.observe(card));
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const vinForm = document.getElementById("vin-form");
+  const vinInput = document.getElementById("vin-input");
+  const vinResults = document.getElementById("vin-results");
+  const carModel = document.getElementById("car-model");
+  const carYear = document.getElementById("car-year");
+  const warrantyStart = document.getElementById("warranty-start");
+  const warrantyEnd = document.getElementById("warranty-end");
+  const warrantyCoverage = document.getElementById("warranty-coverage");
+  const resultVin = document.getElementById("result-vin");
+  const warrantyStatus = document.getElementById("warranty-status");
+
+  const prevBtn = document.getElementById("prev-slide");
+  const nextBtn = document.getElementById("next-slide");
+
+  let serviceSwiper;
+
+  if (vinForm) {
+    vinForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const errorElement = document.getElementById("vin-error");
+      const vin = vinInput.value.trim().toUpperCase();
+      const vinRegex = /^[A-HJ-NPR-Z0-9]{17}$/;
+
+      vinInput.classList.remove("invalid");
+      errorElement.style.display = "none";
+      errorElement.textContent = "";
+
+      if (!vinRegex.test(vin)) {
+        vinInput.classList.add("invalid");
+        errorElement.textContent =
+          "Неверный VIN. Используйте 17 символов: латинские буквы и цифры";
+        errorElement.style.display = "block";
+        return;
+      }
+
+      try {
+        const apiUrl = `https://api.guarantee.carso.kz/cars/by-vin?vin=${encodeURIComponent(
+          vin
+        )}`;
+
+        const carResp = await fetch(apiUrl, {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        });
+
+        if (!carResp.ok) {
+          if (carResp.status === 404 || carResp.status === 400) {
+            throw new Error("Автомобиль с таким VIN не найден.");
+          } else {
+            throw new Error("Ошибка сервера. Повторите попытку позже.");
+          }
+        }
+
+        const data = await carResp.json();
+
+        const car = data;
+        const warranty = car.warrantyPolicy || {};
+        const serviceList = car.serviceRecordList || [];
+
+        resultVin.textContent = car.vin || vin;
+        carModel.textContent = car.model || "-";
+        carYear.textContent = car.year || "-";
+
+        warrantyStart.textContent = warranty.createdTime
+          ? new Date(warranty.createdTime).toLocaleDateString()
+          : "-";
+        warrantyEnd.textContent = warranty.endTime
+          ? new Date(warranty.endTime).toLocaleDateString()
+          : "-";
+        warrantyCoverage.textContent = warranty.maxMileage
+          ? `До ${warranty.maxMileage.toLocaleString()} км`
+          : "-";
+
+        if (warranty.endTime && new Date(warranty.endTime) > new Date()) {
+          warrantyStatus.classList.add("active");
+          warrantyStatus.classList.remove("inactive");
+          warrantyStatus.querySelector("span").textContent = "Гарантия активна";
+        } else {
+          warrantyStatus.classList.remove("active");
+          warrantyStatus.classList.add("inactive");
+          warrantyStatus.querySelector("span").textContent =
+            "Гарантия неактивна";
+        }
+
+        const sliderWrapper = document.getElementById("service-slider");
+        if (!sliderWrapper) {
+          console.error("Не найден элемент service-slider");
+          return;
+        }
+
+        sliderWrapper.innerHTML = "";
+
+        if (serviceList && serviceList.length > 0) {
+          serviceList.forEach((record) => {
+            const slide = document.createElement("div");
+            slide.className = "swiper-slide";
+            slide.innerHTML = `
+              <div class="service-card">
+                <div><span class="label">Тип:</span> <span class="value">${
+                  record.serviceType || "-"
+                }</span></div>
+                <div><span class="label">Описание:</span> <span class="value">${
+                  record.description || "-"
+                }</span></div>
+                <div><span class="label">Пробег:</span> <span class="value">${
+                  record.mileage?.toLocaleString() || "-"
+                }</span></div>
+                <div><span class="label">СТО:</span> <span class="value">${
+                  record.serviceCenter?.name || "-"
+                }</span></div>
+              </div>
+            `;
+            sliderWrapper.appendChild(slide);
+          });
+
+          setTimeout(() => {
+            try {
+              if (serviceSwiper) {
+                serviceSwiper.destroy(true, true);
+              }
+
+              serviceSwiper = new Swiper(".service-swiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                grabCursor: true,
+                navigation: {
+                  nextEl: "#vin-next-slide",
+                  prevEl: "#vin-prev-slide",
+                },
+                breakpoints: {
+                  600: { slidesPerView: 2 },
+                  900: { slidesPerView: 3 },
+                },
+              });
+
+              document.querySelector(".service-swiper").style.display = "block";
+
+              if (prevBtn && nextBtn) {
+                prevBtn.style.display = "block";
+                nextBtn.style.display = "block";
+
+                prevBtn.addEventListener("click", () => {
+                  if (serviceSwiper) {
+                    serviceSwiper.slidePrev();
+                  }
+                });
+
+                nextBtn.addEventListener("click", () => {
+                  if (serviceSwiper) {
+                    serviceSwiper.slideNext();
+                  }
+                });
+              }
+            } catch (error) {
+            }
+          }, 100);
+        } else {
+          document.querySelector(".service-swiper").style.display = "none";
+        }
+
+        errorElement.style.display = "none";
+        vinInput.classList.remove("invalid");
+        vinResults.style.display = "block";
+        vinResults.scrollIntoView({ behavior: "smooth", block: "start" });
+      } catch (err) {
+        console.error("Ошибка при выполнении запроса:", err);
+        vinInput.classList.add("invalid");
+        errorElement.textContent = err.message || "Неизвестная ошибка.";
+        errorElement.style.display = "block";
+        vinResults.style.display = "none";
+      }
+    });
+  }
+});
