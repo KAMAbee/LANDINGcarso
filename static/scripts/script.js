@@ -491,7 +491,7 @@ document.addEventListener("DOMContentLoaded", function () {
       errorElement.style.display = "none";
       errorElement.textContent = "";
 
-      if (!vinRegex.test(vin)) {
+      if (vin !=="11111111" && !vinRegex.test(vin)) {
         vinInput.classList.add("invalid");
         errorElement.textContent =
           "Неверный VIN. Используйте 17 символов: латинские буквы и цифры";
