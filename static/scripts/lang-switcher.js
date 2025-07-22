@@ -52,7 +52,11 @@ const applyTranslations = (translations) => {
       }
     }
     if (typeof text === "string") {
-      el.innerHTML = text;
+      if (text.includes('<')) {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
     }
   });
 
@@ -86,10 +90,12 @@ const setLanguage = async (lang) => {
   currentLang = lang;
   
   const langContainer = document.querySelector(".header__top-lang");
-  if (lang === "kz") {
-    langContainer.classList.add("kz-active");
-  } else {
-    langContainer.classList.remove("kz-active");
+  if (langContainer) {
+    if (lang === "kz") {
+      langContainer.classList.add("kz-active");
+    } else {
+      langContainer.classList.remove("kz-active");
+    }
   }
 
   langBtns.forEach((btn) => {
