@@ -493,8 +493,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (vin !=="111111111" && !vinRegex.test(vin)) {
         vinInput.classList.add("invalid");
-        errorElement.textContent =
-          "Неверный VIN. Используйте 17 символов: латинские буквы и цифры";
+        errorElement.setAttribute("data-i18n", "vinCheck.errors.invalidVin");
+        errorElement.textContent = window.getTranslation ? window.getTranslation("vinCheck.errors.invalidVin") : "Неверный VIN. Используйте 17 символов: латинские буквы и цифры";
         errorElement.style.display = "block";
         return;
       }
@@ -511,9 +511,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!carResp.ok) {
           if (carResp.status === 404 || carResp.status === 400) {
-            throw new Error("Автомобиль с таким VIN не найден.");
+            errorElement.setAttribute("data-i18n", "vinCheck.errors.notFound");
+            throw new Error(window.getTranslation ? window.getTranslation("vinCheck.errors.notFound") : "Автомобиль с таким VIN не найден.");
           } else {
-            throw new Error("Ошибка сервера. Повторите попытку позже.");
+            errorElement.setAttribute("data-i18n", "vinCheck.errors.serverError");
+            throw new Error(window.getTranslation ? window.getTranslation("vinCheck.errors.serverError") : "Ошибка сервера. Повторите попытку позже");
           }
         }
 
@@ -540,12 +542,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (warranty.endTime && new Date(warranty.endTime) > new Date()) {
           warrantyStatus.classList.add("active");
           warrantyStatus.classList.remove("inactive");
-          warrantyStatus.querySelector("span").textContent = "Гарантия активна";
+          warrantyStatus.querySelector("span").setAttribute("data-i18n", "vinCheck.results.warranty.active");
+          warrantyStatus.querySelector("span").textContent = window.getTranslation ? window.getTranslation("vinCheck.results.warranty.active") : "Гарантия активна";
         } else {
           warrantyStatus.classList.remove("active");
           warrantyStatus.classList.add("inactive");
-          warrantyStatus.querySelector("span").textContent =
-            "Гарантия неактивна";
+          warrantyStatus.querySelector("span").setAttribute("data-i18n", "vinCheck.results.warranty.inactive");
+          warrantyStatus.querySelector("span").textContent = window.getTranslation ? window.getTranslation("vinCheck.results.warranty.inactive") : "Гарантия неактивна";
         }
 
         const sliderWrapper = document.getElementById("service-slider");
@@ -560,18 +563,24 @@ document.addEventListener("DOMContentLoaded", function () {
           serviceList.forEach((record) => {
             const slide = document.createElement("div");
             slide.className = "swiper-slide";
+            
+            const typeLabel = window.getTranslation ? window.getTranslation("vinCheck.serviceCard.type") : "Тип:";
+            const descLabel = window.getTranslation ? window.getTranslation("vinCheck.serviceCard.description") : "Описание:";
+            const mileageLabel = window.getTranslation ? window.getTranslation("vinCheck.serviceCard.mileage") : "Пробег:";
+            const serviceCenterLabel = window.getTranslation ? window.getTranslation("vinCheck.serviceCard.serviceCenter") : "СТО:";
+            
             slide.innerHTML = `
               <div class="service-card">
-                <div><span class="label">Тип:</span> <span class="value">${
+                <div><span class="label" data-i18n="vinCheck.serviceCard.type">${typeLabel}</span> <span class="value">${
                   record.serviceType || "-"
                 }</span></div>
-                <div><span class="label">Описание:</span> <span class="value">${
+                <div><span class="label" data-i18n="vinCheck.serviceCard.description">${descLabel}</span> <span class="value">${
                   record.description || "-"
                 }</span></div>
-                <div><span class="label">Пробег:</span> <span class="value">${
+                <div><span class="label" data-i18n="vinCheck.serviceCard.mileage">${mileageLabel}</span> <span class="value">${
                   record.mileage?.toLocaleString() || "-"
                 }</span></div>
-                <div><span class="label">СТО:</span> <span class="value">${
+                <div><span class="label" data-i18n="vinCheck.serviceCard.serviceCenter">${serviceCenterLabel}</span> <span class="value">${
                   record.serviceCenter?.name || "-"
                 }</span></div>
               </div>
@@ -633,9 +642,11 @@ document.addEventListener("DOMContentLoaded", function () {
         vinInput.classList.add("invalid");
         
         if (err.message.toLowerCase().includes("failed to fetch") || err.name === "TypeError") {
-          errorElement.textContent = "Ошибка сервера. Повторите попытку позже.";
+          errorElement.setAttribute("data-i18n", "vinCheck.errors.serverError");
+          errorElement.textContent = window.getTranslation ? window.getTranslation("vinCheck.errors.serverError") : "Ошибка сервера. Повторите попытку позже    .";
         } else {
-          errorElement.textContent = err.message || "Неизвестная ошибка.";
+          errorElement.setAttribute("data-i18n", "vinCheck.errors.unknownError");
+          errorElement.textContent = err.message || (window.getTranslation ? window.getTranslation("vinCheck.errors.unknownError") : "Неизвестная ошибка.");
         }
         
         errorElement.style.display = "block";

@@ -648,11 +648,15 @@
             </div>
         </section>
 
+        
+
         <section class="main__check-vin" id="vin-check">
             <div class="main__check-vin-container">
                 <div class="main__check-vin-header">
-                    <h2 class="main__check-vin-title">Проверка гарантии автомобиля Carso.kz</h2>
-                    <p class="main__check-vin-subtitle">Введите VIN код для получения информации о
+                    <h2 class="main__check-vin-title" data-i18n="vinCheck.title">Проверка гарантии автомобиля Carso.kz
+                    </h2>
+                    <p class="main__check-vin-subtitle" data-i18n="vinCheck.subtitle">Введите VIN код для получения
+                        информации о
                         гарантии <b>Carso.kz</b></p>
                 </div>
 
@@ -660,53 +664,59 @@
                     <div class="main__check-vin-form-container">
                         <form class="main__check-vin-form" id="vin-form">
                             <div class="main__check-vin-input-group">
-                                <label for="vin-input">
+                                <label for="vin-input" data-i18n="vinCheck.form.label">
                                     VIN код автомобиля
-                                    <span class="main__check-vin-info">
+                                    <span class="main__check-vin-info" data-i18n="vinCheck.form.info">
                                         (VIN состоит из 17 символов, может включать буквы и цифры)
                                     </span>
                                 </label>
                                 <input type="text" id="vin-input" class="main__check-vin-input"
+                                    data-i18n-placeholder="vinCheck.form.placeholder"
                                     placeholder="Например: WBAJC51060G575351" maxlength="17">
                                 <span class="vin-error-message" id="vin-error"
                                     style="color: red; display: none;"></span>
-
                             </div>
 
-                            <button type="submit" class="main__check-vin-submit">Проверить</button>
+                            <button type="submit" class="main__check-vin-submit"
+                                data-i18n="vinCheck.form.submitButton">Проверить</button>
                         </form>
                     </div>
 
                     <div class="main__check-vin-example">
-                        <h3 class="main__check-vin-example-title">Где найти VIN код?</h3>
+                        <h3 class="main__check-vin-example-title" data-i18n="vinCheck.example.title">Где найти VIN код?
+                        </h3>
                         <div class="main__check-vin-example-text">
-                            <p>VIN-код (17 символов) можно найти:</p>
+                            <p data-i18n="vinCheck.example.description">VIN-код (17 символов) можно найти:</p>
                             <ul class="vin-locations-list">
-                                <li><strong>В документах:</strong> свидетельство о регистрации ТС (СТС), паспорт
+                                <li data-i18n="vinCheck.example.locations.documents"><strong>В документах:</strong>
+                                    свидетельство о регистрации ТС (СТС), паспорт
                                     транспортного средства (ПТС)</li>
-                                <li><strong>На автомобиле:</strong> под лобовым стеклом со стороны водителя, на стойке
+                                <li data-i18n="vinCheck.example.locations.car"><strong>На автомобиле:</strong> под
+                                    лобовым стеклом со стороны водителя, на стойке
                                     водительской двери</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Результаты поиска (скрыты) -->
                 <div class="main__check-vin-results" id="vin-results" style="display: none;">
                     <div class="main__check-vin-results-header">
-                        <h3 class="main__check-vin-results-title">Информация о гарантии</h3>
-                        <span class="main__check-vin-results-vin">VIN: <strong id="result-vin">-</strong></span>
+                        <h3 class="main__check-vin-results-title" data-i18n="vinCheck.results.title">Информация о
+                            гарантии</h3>
+                        <span class="main__check-vin-results-vin"><span
+                                data-i18n="vinCheck.results.vinLabel">VIN:</span> <strong
+                                id="result-vin">-</strong></span>
                     </div>
 
                     <div class="main__check-vin-results-content">
                         <div class="main__check-vin-results-car">
                             <div class="main__check-vin-results-info">
                                 <div class="main__check-vin-results-model">
-                                    <span class="label">Модель:</span>
+                                    <span class="label" data-i18n="vinCheck.results.carInfo.model">Модель:</span>
                                     <span class="value" id="car-model">-</span>
                                 </div>
                                 <div class="main__check-vin-results-year">
-                                    <span class="label">Год выпуска:</span>
+                                    <span class="label" data-i18n="vinCheck.results.carInfo.year">Год выпуска:</span>
                                     <span class="value" id="car-year">-</span>
                                 </div>
                             </div>
@@ -726,43 +736,38 @@
 
                             <div class="main__check-vin-results-details">
                                 <div class="detail-item">
-                                    <span class="label">Начало гарантии:</span>
+                                    <span class="label" data-i18n="vinCheck.results.warranty.start">Начало
+                                        гарантии:</span>
                                     <span class="value" id="warranty-start">-</span>
                                 </div>
                                 <div class="detail-item">
-                                    <span class="label">Окончание гарантии:</span>
+                                    <span class="label" data-i18n="vinCheck.results.warranty.end">Окончание
+                                        гарантии:</span>
                                     <span class="value" id="warranty-end">-</span>
                                 </div>
                                 <div class="detail-item">
-                                    <span class="label">Покрытие:</span>
+                                    <span class="label" data-i18n="vinCheck.results.warranty.coverage">Покрытие:</span>
                                     <span class="value" id="warranty-coverage">-</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-
-
-
                     <div class="swiper service-swiper">
                         <div class="service-history-text">
-                            <h3>История сервисных записей</h3>
+                            <h3 data-i18n="vinCheck.results.serviceHistory">История сервисных записей</h3>
                         </div>
 
                         <div class="swiper-wrapper" id="service-slider">
-                            <!-- JavaScript вставит сюда .swiper-slide элементы -->
                         </div>
                         <div class="main__services-slider-controls">
                             <div class="services-button-prev" id="vin-prev-slide">❮</div>
                             <div class="services-button-next" id="vin-next-slide">❯</div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-
-
 
 
 
@@ -1368,7 +1373,7 @@
                         </button>
 
                         <div class="main__cities-in-item-content">
-                            
+
 
                             <div class="main__cities-in-item-content-wrap">
                                 <div class="main__cities-in-item-content-title" data-i18n="cities.oil">Замена масла
@@ -1982,107 +1987,106 @@
         <hr class="main__footerApplyLine">
 
 
-         <section class="main__team" id="team">
-                <div class="main__team-container">
-                    <div class="main__team-header">
-                        <h2 class="main__team-title" data-i18n="team.title">Наша команда</h2>
-                    </div>
+        <section class="main__team" id="team">
+            <div class="main__team-container">
+                <div class="main__team-header">
+                    <h2 class="main__team-title" data-i18n="team.title">Наша команда</h2>
+                </div>
 
-                    <div class="main__team-slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide main__team-card">
-                                <div class="main__team-card-image">
-                                    <img src="static/images/team/Алимгазы Елдар - Финансовый Директор.png">
-                                </div>
-                                <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name" data-i18n="team.members.eldare.name">Алимгазы Елдар
-                                    </h3>
-                                    <p class="main__team-card-position" data-i18n="team.members.eldare.position">
-                                        Финансовый Директор</p>
-                                </div>
+                <div class="main__team-slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide main__team-card">
+                            <div class="main__team-card-image">
+                                <img src="static/images/team/Алимгазы Елдар - Финансовый Директор.png">
                             </div>
-                            <div class="swiper-slide main__team-card">
-                                <div class="main__team-card-image">
-                                    <img src="static/images/team/Тлеукабыл Данияр - Генеральный Директор.png">
-                                </div>
-                                <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name" data-i18n="team.members.daniyar.name">Тлеукабыл
-                                        Данияр</h3>
-                                    <p class="main__team-card-position" data-i18n="team.members.daniyar.position">
-                                        Генеральный Директор</p>
-                                </div>
+                            <div class="main__team-card-content">
+                                <h3 class="main__team-card-name" data-i18n="team.members.eldare.name">Алимгазы Елдар
+                                </h3>
+                                <p class="main__team-card-position" data-i18n="team.members.eldare.position">
+                                    Финансовый Директор</p>
                             </div>
-                            <div class="swiper-slide main__team-card">
-                                <div class="main__team-card-image">
-                                    <img
-                                        src="static/images/team/Тургали Санжар - Региональный менеджер по продажам.png">
-                                </div>
-                                <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name" data-i18n="team.members.sanzhar.name">Тургали
-                                        Санжар</h3>
-                                    <p class="main__team-card-position" data-i18n="team.members.sanzhar.position">
-                                        Региональный менеджер по продажам</p>
-                                </div>
+                        </div>
+                        <div class="swiper-slide main__team-card">
+                            <div class="main__team-card-image">
+                                <img src="static/images/team/Тлеукабыл Данияр - Генеральный Директор.png">
                             </div>
-
-                            <div class="swiper-slide main__team-card">
-                                <div class="main__team-card-image">
-                                    <img
-                                        src="static/images/team/Аренов Абу-Али - Руководитель отдела сервисного обслуживания.png">
-                                </div>
-                                <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name" data-i18n="team.members.abuali.name">Аренов Абу-Али
-                                    </h3>
-                                    <p class="main__team-card-position" data-i18n="team.members.abuali.position">
-                                        Руководитель отдела сервисного обслуживания</p>
-                                </div>
+                            <div class="main__team-card-content">
+                                <h3 class="main__team-card-name" data-i18n="team.members.daniyar.name">Тлеукабыл
+                                    Данияр</h3>
+                                <p class="main__team-card-position" data-i18n="team.members.daniyar.position">
+                                    Генеральный Директор</p>
                             </div>
-
-                            <div class="swiper-slide main__team-card">
-                                <div class="main__team-card-image">
-                                    <img src="static/images/team/Боранов Ермек - Начальник службы безопасности.png">
-                                </div>
-                                <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name" data-i18n="team.members.ermek.name">Боранов Ермек
-                                    </h3>
-                                    <p class="main__team-card-position" data-i18n="team.members.ermek.position">
-                                        Начальник службы безопасности</p>
-                                </div>
+                        </div>
+                        <div class="swiper-slide main__team-card">
+                            <div class="main__team-card-image">
+                                <img src="static/images/team/Тургали Санжар - Региональный менеджер по продажам.png">
                             </div>
-
-
-                            <div class="swiper-slide main__team-card">
-                                <div class="main__team-card-image">
-                                    <img
-                                        src="static/images/team/Бейсембеков Алишер - Исполнительный директор & IT директор.png">
-                                </div>
-                                <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name" data-i18n="team.members.alisher.name">Бейсембеков
-                                        Алишер</h3>
-                                    <p class="main__team-card-position" data-i18n="team.members.alisher.position">
-                                        Исполнительный директор & IT директор</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide main__team-card">
-                                <div class="main__team-card-image">
-                                    <img src="static/images/team/Махмутов Тлеухан - Технический директор.png">
-                                </div>
-                                <div class="main__team-card-content">
-                                    <h3 class="main__team-card-name" data-i18n="team.members.tleukhan.name">Махмутов
-                                        Тлеухан</h3>
-                                    <p class="main__team-card-position" data-i18n="team.members.tleukhan.position">
-                                        Технический директор</p>
-                                </div>
+                            <div class="main__team-card-content">
+                                <h3 class="main__team-card-name" data-i18n="team.members.sanzhar.name">Тургали
+                                    Санжар</h3>
+                                <p class="main__team-card-position" data-i18n="team.members.sanzhar.position">
+                                    Региональный менеджер по продажам</p>
                             </div>
                         </div>
 
-                        <div class="main__team-slider-controls">
-                            <div class="team-button-prev">❮</div>
-                            <div class="team-button-next">❯</div>
+                        <div class="swiper-slide main__team-card">
+                            <div class="main__team-card-image">
+                                <img
+                                    src="static/images/team/Аренов Абу-Али - Руководитель отдела сервисного обслуживания.png">
+                            </div>
+                            <div class="main__team-card-content">
+                                <h3 class="main__team-card-name" data-i18n="team.members.abuali.name">Аренов Абу-Али
+                                </h3>
+                                <p class="main__team-card-position" data-i18n="team.members.abuali.position">
+                                    Руководитель отдела сервисного обслуживания</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide main__team-card">
+                            <div class="main__team-card-image">
+                                <img src="static/images/team/Боранов Ермек - Начальник службы безопасности.png">
+                            </div>
+                            <div class="main__team-card-content">
+                                <h3 class="main__team-card-name" data-i18n="team.members.ermek.name">Боранов Ермек
+                                </h3>
+                                <p class="main__team-card-position" data-i18n="team.members.ermek.position">
+                                    Начальник службы безопасности</p>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide main__team-card">
+                            <div class="main__team-card-image">
+                                <img
+                                    src="static/images/team/Бейсембеков Алишер - Исполнительный директор & IT директор.png">
+                            </div>
+                            <div class="main__team-card-content">
+                                <h3 class="main__team-card-name" data-i18n="team.members.alisher.name">Бейсембеков
+                                    Алишер</h3>
+                                <p class="main__team-card-position" data-i18n="team.members.alisher.position">
+                                    Исполнительный директор & IT директор</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide main__team-card">
+                            <div class="main__team-card-image">
+                                <img src="static/images/team/Махмутов Тлеухан - Технический директор.png">
+                            </div>
+                            <div class="main__team-card-content">
+                                <h3 class="main__team-card-name" data-i18n="team.members.tleukhan.name">Махмутов
+                                    Тлеухан</h3>
+                                <p class="main__team-card-position" data-i18n="team.members.tleukhan.position">
+                                    Технический директор</p>
+                            </div>
                         </div>
                     </div>
-            </section>
+
+                    <div class="main__team-slider-controls">
+                        <div class="team-button-prev">❮</div>
+                        <div class="team-button-next">❯</div>
+                    </div>
+                </div>
+        </section>
 
 
 
@@ -2116,7 +2120,7 @@
     <footer class="footer">
         <div class="footer__in">
 
-           
+
 
 
 
