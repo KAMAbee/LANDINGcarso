@@ -631,7 +631,13 @@ document.addEventListener("DOMContentLoaded", function () {
       } catch (err) {
         console.error("Ошибка при выполнении запроса:", err);
         vinInput.classList.add("invalid");
-        errorElement.textContent = err.message || "Неизвестная ошибка.";
+        
+        if (err.message.toLowerCase().includes("failed to fetch") || err.name === "TypeError") {
+          errorElement.textContent = "Ошибка сервера. Повторите попытку позже.";
+        } else {
+          errorElement.textContent = err.message || "Неизвестная ошибка.";
+        }
+        
         errorElement.style.display = "block";
         vinResults.style.display = "none";
       }
