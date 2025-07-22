@@ -643,7 +643,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         if (err.message.toLowerCase().includes("failed to fetch") || err.name === "TypeError") {
           errorElement.setAttribute("data-i18n", "vinCheck.errors.serverError");
-          errorElement.textContent = window.getTranslation ? window.getTranslation("vinCheck.errors.serverError") : "Ошибка сервера. Повторите попытку позже    .";
+          errorElement.textContent = window.getTranslation ? window.getTranslation("vinCheck.errors.serverError") : "Ошибка сервера. Повторите попытку позже.";
         } else {
           errorElement.setAttribute("data-i18n", "vinCheck.errors.unknownError");
           errorElement.textContent = err.message || (window.getTranslation ? window.getTranslation("vinCheck.errors.unknownError") : "Неизвестная ошибка.");
