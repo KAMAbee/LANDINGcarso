@@ -26,7 +26,7 @@
   },
   "aboutWarranty": {
     "title": "Carso.kz кепілдігі дегеніміз не?",
-    "description": "Carso.kz кепілдігі автокөлік иесіне <b>3&nbsp;000&nbsp;000₸</b> дейін үнемдеуге мүмкіндік береді, негізгі тораптарды қамтиды: ішкі жану қозғалтқышы, электр қозғалтқышы және электромобиль батареясы.",
+    "description": "Carso.kz кепілдігі автокөлік иесіне <b>3 000 000₸</b> дейін үнемдеуге мүмкіндік береді, негізгі тораптарды қамтиды: ішкі жану қозғалтқышы, электр қозғалтқышы және электромобиль батареясы.",
     "benefits": {
       "cost": "Автокөлік бұзылған кезде<br>шығындарды азайту",
       "support": "Жөндеудің әр<br>кезеңінде қолдау",
@@ -52,7 +52,7 @@
     },
     "mileage": {
       "badge": "ЖҮРІС",
-      "title": "300&nbsp;000 км дейін",
+      "title": "300 000 км дейін",
       "description": "автокөлік жүрісі"
     },
     "age": {
@@ -196,13 +196,13 @@
   },
   "area": {
     "title": "Автокөліктерге кепілдік қайда қолданылады",
-    "description": "Carso.kz кепілдігі автокөлікті қайдан сатып алғаныңызға немесе қайда тұратыныңызға қарамастан қол жетімді.\n\nБүгінгі күні біз Ақтаудан&nbsp;Семейге&nbsp;дейін автокөліктерге қызмет көрсетеміз және әрқашан көмекке келуге дайынбыз — тіпті еліміздің ең шалғай бұрыштарында да.",
+    "description": "Carso.kz кепілдігі автокөлікті қайдан сатып алғаныңызға немесе қайда тұратыныңызға қарамастан қол жетімді.\n\nБүгінгі күні біз Ақтаудан Семейге дейін автокөліктерге қызмет көрсетеміз және әрқашан көмекке келуге дайынбыз — тіпті еліміздің ең шалғай бұрыштарында да.",
     "button": "Кепілдікті рәсімдеу",
     "mapText": "Carso.kz барлық <br> Қазақстан бойынша жұмыс істейді"
   },
   "services": {
     "title": "Біздің автосервистер",
-    "description": "*Ескерту: сұйықтықтарды келесі ауыстыру алдында алдын ала жазылып, Carso.kz-ге 8&nbsp;(708)&nbsp;240-72-28 байланыс нөмірі арқылы хабарлаңыз",
+    "description": "*Ескерту: сұйықтықтарды келесі ауыстыру алдында алдын ала жазылып, Carso.kz-ге 8 (708) 240-72-28 байланыс нөмірі арқылы хабарлаңыз",
     "button": "Техникалық тексеруге жазылу"
   },
   "servicePartners": {
@@ -224,9 +224,9 @@
         "name": "Ирина",
         "city": "Павлодар",
         "repairSelf": "Жөндеу құны <br> өз бетінше",
-        "repairSelfPrice": "600&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "600 000 ₸",
         "repairCompany": "Carso.kz төлемі <br>біздің тариф бойынша",
-        "repairCompanyPrice": "180&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "180 000 ₸"
       },
       {
         "title": "Nissan X Trail вариаторын жөндеу",
@@ -234,9 +234,9 @@
         "name": "Алишер",
         "city": "Ақтау",
         "repairSelf": "Жөндеу құны <br> өз бетінше",
-        "repairSelfPrice": "470&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "470 000 ₸",
         "repairCompany": "Carso.kz төлемі <br>біздің тариф бойынша",
-        "repairCompanyPrice": "60&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "60 000 ₸"
       },
       {
         "title": "Kia Opirus қозғалтқышын жөндеу",
@@ -244,9 +244,9 @@
         "name": "Карим",
         "city": "Астана",
         "repairSelf": "Жөндеу құны <br> өз бетінше",
-        "repairSelfPrice": "80&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "80 000 ₸",
         "repairCompany": "Carso.kz төлемі <br>біздің тариф бойынша",
-        "repairCompanyPrice": "50&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "50 000 ₸"
       },
       {
         "title": "Nissan X Trail автоматты беріліс қорабын ауыстыру",
@@ -254,9 +254,9 @@
         "name": "Алибек",
         "city": "Астана",
         "repairSelf": "Жөндеу құны <br> өз бетінше",
-        "repairSelfPrice": "400&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "400 000 ₸",
         "repairCompany": "Carso.kz төлемі <br>біздің тариф бойынша",
-        "repairCompanyPrice": "200&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "200 000 ₸"
       },
       {
         "title": "Hyundai Accent қозғалтқышы мен стартерін жөндеу",
@@ -264,9 +264,9 @@
         "name": "Амир",
         "city": "Көкшетау",
         "repairSelf": "Жөндеу құны <br> өз бетінше",
-        "repairSelfPrice": "80&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "80 000 ₸",
         "repairCompany": "Carso.kz төлемі <br>біздің тариф бойынша",
-        "repairCompanyPrice": "60&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "60 000 ₸"
       },
       {
         "title": "Hyundai Santa Fe генераторын жөндеу және ГБЦ ауыстыру",
@@ -274,9 +274,9 @@
         "name": "Максим",
         "city": "Петропавл",
         "repairSelf": "Жөндеу құны <br> өз бетінше",
-        "repairSelfPrice": "75&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "75 000 ₸",
         "repairCompany": "Carso.kz төлемі <br>біздің тариф бойынша",
-        "repairCompanyPrice": "60&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "60 000 ₸"
       },
       {
         "title": "BMW X1 қозғалтқышын жөндеу",
@@ -284,9 +284,9 @@
         "name": "Гүлнара",
         "city": "Алматы",
         "repairSelf": "Жөндеу құны <br> өз бетінше",
-        "repairSelfPrice": "120&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "120 000 ₸",
         "repairCompany": "Carso.kz төлемі <br>біздің тариф бойынша",
-        "repairCompanyPrice": "80&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "80 000 ₸"
       },
       {
         "title": "Hyundai Santa Fe қозғалтқышын ауыстыру",
@@ -294,9 +294,9 @@
         "name": "Темірлан",
         "city": "Семей",
         "repairSelf": "Жөндеу құны <br> өз бетінше",
-        "repairSelfPrice": "110&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "110 000 ₸",
         "repairCompany": "Carso.kz төлемі <br>біздің тариф бойынша",
-        "repairCompanyPrice": "50&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "50 000 ₸"
       }
     ]
   },
@@ -352,12 +352,12 @@
     "description": "<b>Carso.kz</b> кепілдігімен автокөліктерді сатып ала алатын автосалондар:"
   },
   "footer": {
-    "companyInfo": "\"CARSO&nbsp;GROUP\"&nbsp;ЖШС.&nbsp;Барлық&nbsp;құқықтар&nbsp;қорғалған.",
-    "address": "Мекенжай: Қазақстан,&nbsp;Астана,&nbsp;Сығанақ,​&nbsp;60/2.",
-    "bin": "БСН (ЖСН):&nbsp;250240009125.",
-    "bank": "Банк:&nbsp;\"Kaspi&nbsp;Bank\"&nbsp;АҚ.",
-    "bic": "БСК:&nbsp;CASPKZKA.",
-    "account": "Шот&nbsp;нөмірі:&nbsp;KZ73722S000043641156F.",
+    "companyInfo": "\"CARSO GROUP\" ЖШС. Барлық құқықтар қорғалған.",
+    "address": "Мекенжай: Қазақстан, Астана, Сығанақ,​ 60/2.",
+    "bin": "БСН (ЖСН): 250240009125.",
+    "bank": "Банк: \"Kaspi Bank\" АҚ.",
+    "bic": "БСК: CASPKZKA.",
+    "account": "Шот нөмірі: KZ73722S000043641156F.",
     "2gis": "Біз 2Gis-те"
   },
   "cities": {

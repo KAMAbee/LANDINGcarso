@@ -26,7 +26,7 @@
   },
   "aboutWarranty": {
     "title": "Что такое гарантия Carso.kz?",
-    "description": "Гарантия Carso.kz позволяет автовладельцу сэкономить до <b>3&nbsp;000&nbsp;000₸</b>, покрывая ключевые узлы: двигатель внутреннего сгорания, электродвигатель и батарею электромобиля.",
+    "description": "Гарантия Carso.kz позволяет автовладельцу сэкономить до <b>3 000 000₸</b>, покрывая ключевые узлы: двигатель внутреннего сгорания, электродвигатель и батарею электромобиля.",
     "benefits": {
       "cost": "Снижение затрат<br>при поломках автомобиля",
       "support": "Поддержка<br>на каждом этапе ремонта",
@@ -52,7 +52,7 @@
     },
     "mileage": {
       "badge": "ПРОБЕГ",
-      "title": "до 300&nbsp;000 км",
+      "title": "до 300 000 км",
       "description": "пробег автомобиля"
     },
     "age": {
@@ -196,13 +196,13 @@
   },
   "area": {
     "title": "Где действует гарантия на автомобили",
-    "description": "Гарантия Carso.kz доступна независимо от того, где вы купили автомобиль или где живёте.\n\nСегодня мы обслуживаем авто от Актау&nbsp;до&nbsp;Семея и всегда готовы прийти на помощь — даже в самых отдалённых уголках страны.",
+    "description": "Гарантия Carso.kz доступна независимо от того, где вы купили автомобиль или где живёте.\n\nСегодня мы обслуживаем авто от Актау до Семея и всегда готовы прийти на помощь — даже в самых отдалённых уголках страны.",
     "button": "Оформить гарантию",
     "mapText": "Carso.kz работает <br> по вcему Казахстану"
   },
   "services": {
     "title": "Наши автосервисы",
-    "description": "*Примечание: перед очередной заменой жидкостей заранее записывайтесь и уведомляйте Carso.kz по контакту 8&nbsp;(708)&nbsp;240-72-28",
+    "description": "*Примечание: перед очередной заменой жидкостей заранее записывайтесь и уведомляйте Carso.kz по контакту 8 (708) 240-72-28",
     "button": "Записаться на технический осмотр"
   },
   "servicePartners": {
@@ -224,9 +224,9 @@
         "name": "Ирина",
         "city": "Павлодар",
         "repairSelf": "Стоимость ремонта <br> самостоятельно",
-        "repairSelfPrice": "600&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "600 000 ₸",
         "repairCompany": "Выплата Carso.kz по <br>тарифу нашей компании",
-        "repairCompanyPrice": "180&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "180 000 ₸"
       },
       {
         "title": "Ремонт вариатора Nissan X Trail",
@@ -234,9 +234,9 @@
         "name": "Алишер",
         "city": "Актау",
         "repairSelf": "Стоимость ремонта <br> самостоятельно",
-        "repairSelfPrice": "470&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "470 000 ₸",
         "repairCompany": "Выплата Carso.kz по <br>тарифу нашей компании",
-        "repairCompanyPrice": "60&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "60 000 ₸"
       },
       {
         "title": "Ремонт двигателя Kia Opirus",
@@ -244,9 +244,9 @@
         "name": "Карим",
         "city": "Астана",
         "repairSelf": "Стоимость ремонта <br> самостоятельно",
-        "repairSelfPrice": "80&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "80 000 ₸",
         "repairCompany": "Выплата Carso.kz по <br>тарифу нашей компании",
-        "repairCompanyPrice": "50&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "50 000 ₸"
       },
       {
         "title": "Замена автоматической коробки передач Nissan X Trail",
@@ -254,9 +254,9 @@
         "name": "Алибек",
         "city": "Астана",
         "repairSelf": "Стоимость ремонта <br> самостоятельно",
-        "repairSelfPrice": "400&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "400 000 ₸",
         "repairCompany": "Выплата Carso.kz. по <br>тарифу нашей компании",
-        "repairCompanyPrice": "200&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "200 000 ₸"
       },
       {
         "title": "Ремонт двигателя и стартера Hyundai Accent",
@@ -264,9 +264,9 @@
         "name": "Амир",
         "city": "Кокшетау",
         "repairSelf": "Стоимость ремонта <br> самостоятельно",
-        "repairSelfPrice": "80&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "80 000 ₸",
         "repairCompany": "Выплата Carso.kz по <br>тарифу нашей компании",
-        "repairCompanyPrice": "60&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "60 000 ₸"
       },
       {
         "title": "Ремонт генератора и замена ГБЦ Hyundai Santa Fe",
@@ -274,9 +274,9 @@
         "name": "Максим",
         "city": "Петропавловск",
         "repairSelf": "Стоимость ремонта <br> самостоятельно",
-        "repairSelfPrice": "75&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "75 000 ₸",
         "repairCompany": "Выплата Carso.kz по <br>тарифу нашей компании",
-        "repairCompanyPrice": "60&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "60 000 ₸"
       },
       {
         "title": "Ремонт двигателя BMW X1",
@@ -284,9 +284,9 @@
         "name": "Гульнара",
         "city": "Алматы",
         "repairSelf": "Стоимость ремонта <br> самостоятельно",
-        "repairSelfPrice": "120&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "120 000 ₸",
         "repairCompany": "Выплата Carso.kz по <br>тарифу нашей компании",
-        "repairCompanyPrice": "80&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "80 000 ₸"
       },
       {
         "title": "Замена двигателя Hyundai Santa Fe",
@@ -294,9 +294,9 @@
         "name": "Темирлан",
         "city": "Семей",
         "repairSelf": "Стоимость ремонта <br> самостоятельно",
-        "repairSelfPrice": "110&nbsp;000&nbsp;₸",
+        "repairSelfPrice": "110 000 ₸",
         "repairCompany": "Выплата Carso.kz по <br>тарифу нашей компании",
-        "repairCompanyPrice": "50&nbsp;000&nbsp;₸"
+        "repairCompanyPrice": "50 000 ₸"
       }
     ]
   },
@@ -352,12 +352,12 @@
     "description": "Автосалоны, где вы можете приобрести автомобили с гарантией <b>Carso.kz</b>:"
   },
   "footer": {
-    "companyInfo": "ТОО&nbsp;\"CARSO&nbsp;GROUP\".&nbsp;Все&nbsp;права&nbsp;защищены.",
-    "address": "Адрес: Казахстан,&nbsp;Астана,&nbsp;Сыганак,​&nbsp;60/2.",
-    "bin": "БИН (ИИН):&nbsp;250240009125.",
-    "bank": "Банк:&nbsp;АО&nbsp;\"Kaspi&nbsp;Bank\".",
-    "bic": "БИК:&nbsp;CASPKZKA.",
-    "account": "Номер&nbsp;счёта:&nbsp;KZ73722S000043641156F.",
+    "companyInfo": "ТОО \"CARSO GROUP\". Все права защищены.",
+    "address": "Адрес: Казахстан, Астана, Сыганак,​ 60/2.",
+    "bin": "БИН (ИИН): 250240009125.",
+    "bank": "Банк: АО \"Kaspi Bank\".",
+    "bic": "БИК: CASPKZKA.",
+    "account": "Номер счёта: KZ73722S000043641156F.",
     "2gis": "Мы в 2Gis"
   },
   "cities": {
