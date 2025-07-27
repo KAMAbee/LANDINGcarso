@@ -99,7 +99,7 @@ html {
     height: 72px;
     width: 100%; }
     .header__top-logo {
-      height: 46px;
+      height: 26px;
       transition: transform 0.3s ease; }
       .header__top-logo:hover {
         transform: scale(1.02); }
@@ -206,7 +206,7 @@ html {
         line-height: 46px; }
   @media (max-width: 1170px) {
     .header .header__top-logo {
-      height: 40px; }
+      height: 24px; }
     .header .header__in {
       width: 100%;
       padding: 0 20px; }
@@ -242,16 +242,16 @@ html {
           top: 8px; } }
   @media (max-width: 600px) {
     .header .header__top-logo {
-      height: 34px; }
+      height: 24px; }
     .header .header__top-button {
       width: 110px;
       font-size: 13px;
       height: 38px; } }
-  @media (max-width: 350px) {
+  @media (max-width: 380px) {
     .header .header__top {
       padding: 10px 0; }
     .header .header__top-logo {
-      height: 28px; }
+      height: 20px; }
     .header .header__top-button {
       width: 90px;
       font-size: 12px;
@@ -2651,7 +2651,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: 70px; }
     .main__service-partners-container {
       width: calc(100% - 40px);
       max-width: 1180px;
@@ -2833,6 +2834,104 @@ html {
         width: calc(100% - 20px); }
       .main__team-card-image {
         height: 400px; } }
+  .main__invest {
+    padding: 70px 0;
+    width: 100%;
+    background: #fffbd3; }
+    .main__invest-container {
+      width: calc(100% - 40px);
+      max-width: 1180px;
+      margin: 0 auto; }
+    .main__invest-header {
+      text-align: center;
+      margin-bottom: 40px; }
+    .main__invest-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 15px; }
+      @media (max-width: 768px) {
+        .main__invest-title {
+          font-size: 24px; } }
+    .main__invest-subtitle {
+      font-size: 18px;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto;
+      margin-bottom: 30px; }
+    .main__invest-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px; }
+    .main__invest-benefits {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 30px; }
+      @media (max-width: 900px) {
+        .main__invest-benefits {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px; } }
+    .main__invest-benefit {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-width: 260px;
+      max-width: 340px; }
+      @media (max-width: 600px) {
+        .main__invest-benefit {
+          flex-direction: column;
+          text-align: center;
+          padding: 18px 12px;
+          min-width: 0;
+          max-width: 100%; } }
+    .main__invest-benefit-icon {
+      background: #FFDE59;
+      border-radius: 8px;
+      min-width: 54px;
+      max-width: 54px;
+      max-height: 54px;
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .main__invest-benefit-icon img {
+        width: 32px;
+        height: 32px; }
+    .main__invest-benefit-text {
+      font-size: 16px;
+      color: #222;
+      font-weight: 500;
+      line-height: 1.4; }
+      .main__invest-benefit-text b {
+        font-weight: 700;
+        color: #000; }
+    .main__invest-action {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px; }
+    .main__invest-button {
+      display: inline-block;
+      background: #FFDE59;
+      color: #000;
+      font-weight: 700;
+      font-size: 18px;
+      border-radius: 12px;
+      padding: 18px 44px;
+      text-decoration: none;
+      transition: background 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 12px rgba(255, 222, 89, 0.18); }
+      .main__invest-button:hover {
+        background: #FFE251;
+        box-shadow: 0 8px 24px rgba(255, 222, 89, 0.28); }
+      .main__invest-button:active {
+        background: #F1D545; }
 
 @media (prefers-reduced-motion: reduce) {
   .main__tariffs-card,
@@ -2879,7 +2978,7 @@ html {
         text-decoration: underline;
         color: #0954b7; }
     .footer__in-logo {
-      height: 50px; }
+      height: 32px; }
     .footer__in-privacy {
       color: #000;
       font-size: 12px;
@@ -2980,7 +3079,6 @@ html {
   .main__cities-in-item.active .main__cities-in-item-content {
     max-height: 300px !important; }
 
-  /* Optional: if other animations are also problematic */
   .main__varanty-in-cards-item,
   .main__works-in-cards-item,
   .main__cars-in-cells-item,
